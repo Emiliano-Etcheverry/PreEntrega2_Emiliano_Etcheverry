@@ -1,982 +1,1014 @@
-@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Bruno Ace', cursive;
-}
-
-body{
-    background-color: white;
-}
-
-/* Header */
-
-.container-fluid{
-    align-items: end;
-}
-
-.container-fluid h1{
-    margin:0;
-    padding: 0;
-}
-
-.f1-icon-m{
-    display: none;
-}
-
-.nav-link{
-    display: inline-block;
-    position: relative;
-}
-
-.nav-link:after{
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 4px;
-    bottom: 0;
-    left: 0;
-    background-color: red;
-    transform: scaleX(0);
-    transform-origin: bottom right;
-    transition: transform 0.3s ease-out;
-}
-
-.nav-link:hover:after{
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
-
-/* Main */
-
-    /* Index */
-
-main{
-    /* display: flex;
-    flex-direction: column;
-    align-items: center; */
-}
-
-.contenedor-grid{
-    display: grid;
-    margin: 4% 5% 2% 5%;
-    grid-template-columns: 50% 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas: 
-    "newvid colvid1 colvid2"
-    "newvid colvid1 colvid2"
-    "newvid colvid1 colvid2"
-    "newvid colvid1 colvid2";
-}
-
-.newvid{
-    grid-area: newvid;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 5%;
-    border-top: 8px solid black;
-    border-right: 8px solid black;
-    border-radius: 0 25px 0 0;
-    padding: 2% 2% 0 0;
-}
-
-.colvid1{
-    grid-area: colvid1;
-    display: flex;
-    flex-direction: column;
-    padding-left: 10px;
-    padding-right: 5px;
-    justify-content: space-evenly;
-}
-
-.colvid2{
-    grid-area: colvid2;
-    display: flex;
-    flex-direction: column;
-    padding-left: 5px;
-    padding-right: 10px;
-    justify-content: space-evenly;
-}
-
-.card{
-    display: grid;
-    position: relative;
-    align-items: stretch;
-    font-size: 70%;
-    background-color: white;
-}
-
-.card a{
-    text-decoration: none;
-    color: black;
-}
-
-.card-body h5{
-    color: red;
-}
-
-.borde{
-    border-right: 4px solid black;
-    border-bottom: 4px solid black;
-    border-left: 4px solid black;
-    border-radius: 2px 2px 10px 10px;
-}
-
-.morenews h2{
-    border-bottom: 5px solid black;
-    padding-bottom: 10px;
-    margin: 0 5% 0 5%;
-}
-
-.contmorenew{
-    margin: 2% 5% 0 5%;
-}
-
-.contmorenew .card{
-    border: none;
-}
-
-.carousel{
-    display: none;
-}
-
-    /* Pilotos */
-
-.contitulo{
-    border-top: 5px solid black ;
-    border-right: 5px solid black ;
-    border-radius: 0 5px 0 0;
-    margin: 2% 5% 0 5%;
-    padding-top: 1%;
-}
-
-.contitulo-p{
-    width: 100%;
-    background-color: rgb(182, 182, 182);
-    padding: 0.5%;
-    text-align: center;
-    border-radius: 7px;
-}
-
-.pilotos-grid{
-    display: grid;
-    grid-template-rows: repeat(5, 1fr);
-    gap: 2%;
-    margin-top: 50px;
-}
-
-.filas{
-    padding: 0 10% 0 10%;
-    display: flex;
-    justify-content: center;
-    gap: 4%;
-}
-
-.filas-4{
-    padding: 0 4% 0 4%;
-    display: flex;
-    justify-content: center;
-    gap: 2%; 
-}
-
-.pilotos{
-    border-radius: 0 5px 0 0;
-    border-top: 3px solid black;
-    border-right: 3px solid black;
-    width: 1fr;
-}
-
-.pilotos-grid hr{
-    width: 95%;
-    margin: 2%;
-}
-
-.cabecera-piloto{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-right: 2%;
-}
-
-.cabecera-piloto div{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.pilotos h1{
-    font-weight: bold;
-    font-size: 380%;
-}
-
-.cabecera-piloto h2{
-    color: black;
-    font-size: 200%;
-}
-
-.cabecera-piloto h3{
-    color:white; border-radius: 5px; 
-    font-size: 155%;
-}
-
-.nombre-piloto{
-    display: flex;
-    align-items: center;
-    border-left: 5px solid blue;
-    justify-content: space-between;
-}
-
-.nombre-p{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 2%;
-    min-width: 190px;
-}
-
-.nombre-piloto h4{
-    color: rgba(0, 0, 0, 0.493);
-    font-size: 100%;
-}
-
-.nombre-piloto h3{
-    font-size: 130%;
-    margin: 0;
-}
-
-.nombre-piloto img{
-    width: 18%;
-    padding-right: 2%;
-}
-
-.cara-piloto{
-    display: flex;
-    justify-content: space-between;
-}
-
-.piloto{
-    width: 206px;
-    height: 206px;
-}
-
-.piloto-texto{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-
-.equipo{
-    color: rgba(0, 0, 0, 0.493);
-    font-size: 100%;
-    width: 150%;
-}
-
-.num-piloto{
-    color: red;
-    font-size: 50px;
-    margin: 0; 
-}
-
-    /* Posiciones */
-
-.posiciones{
-    display: flex;
-    height: 200px;
-    align-items: center;
-    justify-content: center;
-}
-
-.podium{
-    display: flex;
-    justify-content: center; 
-    gap: 2%;  
-    align-items: end;
-    padding: 0 2% 0 2%;
-}
-
-.puesto2{
-    width: 90%;
-}
-
-.puesto1{
-    width: 100%;
-}
-
-.puesto3{
-    width: 80%;
-}
-
-.podio{
-    display: flex;
-    flex-direction: column;
-    border-radius: 25px;
-    box-shadow: 5px 5px 20px;
-}
-
-
-.podio-piloto{
-    border-bottom: 8px solid red;
-    position: relative;
-    height: 100%;
-}
-
-.podio-piloto h1{
-    position: absolute;
-    left: 5%;
-    bottom: 70%;
-    font-size: 500%;
-}
-
-.puesto2 .podio-piloto h1{    
-    position: absolute;
-    left: 8%;
-    bottom: 52%;
-}
-
-.puesto3 .podio-piloto h1{ 
-    position: absolute;
-    left: 8%;
-    bottom: 52%;
-}
-
-.podio-img{
-    width: 100%;
-}
-
-.name-podio{
-    display: flex;
-    justify-content: space-between;
-    background-color: black;
-    color: white;
-    padding: 5%;
-    width: 100%;
-    border-radius: 0 0 25px 25px;
-}
-
-.name-podio h3,h1{
-    font-size: 170%;
-}
-
-.pais1{
-    width: 22%;
-}
-
-.pais2{
-    width: 22%;
-}
-
-.pais3{
-    width: 22%;
-}
-
-
-.position-pilotos{
-    margin: 2% 5% 2% 5%;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.stand{
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    background-color: antiquewhite;
-    padding-left: 20px;
-    border-radius: 20px;
-}
-
-.st-name{
-    display: flex;
-    justify-content: center;
-    align-items: safe center;
-    gap: 2%; 
-    width: 80%;
-}
-
-.st-name h2{
-    border-right: 3px solid red;
-    padding-right: 2%;
-}
-
-.points{
-    display: flex;
-    align-items: center;
-    padding: 8px 20px 8px 20px;
-}
-
-.points h2{
-    background-color: black;
-    border-radius: 20px;
-    color: white;
-    margin: 0;
-}
-
-.points i{
-    font-size: 40px;
-}
-
-/* F1 topics */
-
-.f1topics{
-    position: relative;
-}
-
-
-.f1topics h2{
-    background-color: white;
-    position: absolute;
-    top: -15px;
-    left: 0;
-    padding-right: 10px;
-}
-
-.f1-new-topics{
-    border-top: 8px solid black;
-    border-right: 8px solid black;
-    border-radius: 0 20px 0 0;
-    padding-top: 2%;
-    padding-right: 2%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 30px;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    width: 100%;
-}
-
-.contmorenew .card{
-    border: none;
-}
-
-.carousel{
-    display: none;
-}
-
-.refs-e{
-    display: inline-block;
-    position: relative;
-    background-image: url(../img/e-sport.jpg);
-    background-repeat: none;
-    background-size: 100%;
-    height: 170px;
-    width: 302px; 
-}
-
-.refs-s{
-    display: inline-block;
-    position: relative;
-    background-image: url(https://media.formula1.com/image/upload/f_auto/q_auto/v1679313708/fom-website/2018-redesign-assets/Tag%20collections/Other/NetZero_Car_i4_i3_0004.jpg.transform/5col/image.jpg);
-    background-repeat: none;
-    background-size: 100%;
-    height: 170px;
-    width: 302px; 
-}
-
-.refs-p{
-    display: inline-block;
-    position: relative;
-    background-image: url(https://media.formula1.com/image/upload/content/dam/fom-website/2018-redesign-assets/Tag%20collections/Other/Beyond%20The%20Grid%20Header%202023.png.transform/5col/image.png);
-    background-repeat: none;
-    background-size: 100%;
-    height: 170px;
-    width: 302px; 
-}
-
-.refs-c{
-    display: inline-block;
-    position: relative;
-    background-image: url(https://media.formula1.com/image/upload/content/dam/fom-website/2018-redesign-assets/Tag%20collections/Other/Race-calendar.jpg.transform/5col/image.jpg);
-    background-repeat: none;
-    background-size: 100%;
-    height: 170px;
-    width: 302px; 
-}
-
-.f1-new-topics h3{
-    text-decoration: none;
-    color: white;
-    position: absolute;
-    top: 40%;
-    left: 16%;
-}
-
-/* Videos */
-
-.video-head{
-    background-color: black;
-    padding-top: 10px;
-}
-
-.video-head h1{
-    color: white;
-    padding: 2%;
-}
-.st-v{
-    position: relative;
-    border-top: 8px solid red;
-    border-right: 8px solid red;
-    border-bottom: 8px solid red;
-    border-radius: 0 20px 20px 0;
-    padding: 2% 2% 2% 0;
-    margin: 5%;
-}
-.start-v{
-    display: flex; 
-    gap: 2%;
-    height: 500px;
-    width: 100%; 
-}
-
-
-.st-v h2{
-    position: absolute;
-    top: -5%;
-    left: 0%;
-    color: white;
-    background-color: black;
-    padding-right: 10px;
-}
-
-.vid-start{
-    border: 2px 2px 2px 0 solid grey;
-
-}
-
-.vid-start-2{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    border: 2px 2px 2px 0 solid grey;
-}
-
-.video-head h2{
-    color: white;
-    position: relative;
-    left: 2%;
-}
-
-.vid-features{
-    padding:  5%;
-}
-
-.highlights{
-    padding-top: 2%;
-    background-color: rgb(241, 241, 241);
-}
-
-.highlights h2{
-    position: relative;
-    left: 2%;
-}
-
-.cont-high{
-    padding: 2%;
-    margin: 0 2% 0 2%;
-    border-top: 5px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-}
-
-.card-high{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    align-items: stretch;
-    font-size: 70%;
-    background-color: white;
-    border-radius: 0 0 20px 20px;
-    box-shadow: 2px 2px 20px;
-    border-bottom: 2px solid rgb(61, 61, 61);
-    border-right: 2px solid rgb(61, 61, 61);
-}
-
-.card-high iframe{
-   height: 250px;
-}
-
-.card-body-high{
-    height: 100px;
-    text-align: center;
-    padding-top: 5%;
-}
-
-.related{
-    padding-bottom: 2%;
-    background-color: rgb(241, 241, 241);
-}
-
-.related h1{
-    padding-left: 2%;
-}
-
-.grid-related{
-    display: grid;
-    grid-template-rows: repeat(4, 1fr);
-    gap: 2%;
-    margin: 2% 2% 5% 2%;
-}
-
-.grid-rel-fila{
-    display: flex;
-    justify-content: center;
-    gap: 4%;
-}
-
-.video-f1{
-    background-color: white;
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    border-radius: 0 0 20px 20px;
-}
-
-.video-f1 a{
-    text-decoration: none;
-}
-
-.img-video-f1{
-    width: 100%;
-    height: 100%; 
-}
-
-.video-play{
-    display: inline-block;
-    position: relative;
-    width: 100%;
-}
-.bi-play-fill{
-    position: absolute;
-    display: flex;
-    left: 0;
-    bottom: 0;
-    background-color: red;
-    color: white;
-    height: 40px;
-    width: 50px;
-    font-size: 30px;
-    align-items: center;
-    justify-content: center;
-}
-
-.text-video{
-    text-decoration: none;
-    color: black;
-    padding: 3%;
-    text-align: start;
-}
-
-/* Footer */
-
-footer{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: black;
-}
-
-.iconos{  
-    position: relative;
-    margin: 0;
-    bottom: 0;
-    right: 0;
-    width: 280px;
-}
-
-.derechos{
-    font-size: small; 
-    padding-top: 3.5%;
-    position: relative;
-    left: 5%;
-    bottom: 0;
-    color: white;
-}
-
-.iconos a{
-    text-decoration: none;
-}
-
-.iconos i{
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;    
-    background-color: transparent;
-    border: 4px solid white;
-    border-radius: 50%;
-    font-size: 25px;
-    color: white;
-}
-
-.f1-icon{
-    position: relative;
-    left: 0;
-    bottom: 0;
-    height: 56px;
-    width: 100px;
-    
-}
-
-    /* Equipo */
-
-
-.equipos-grid{
-    display: grid;
-    grid-template-rows: repeat(5, 1fr);
-    gap: 2%;
-    margin-top: 50px;
-    margin-bottom: 15%;
-}
-
-.filas-equipos{
-    padding: 0 10% 0 10%;
-    display: flex;
-    justify-content: center;
-    gap: 4%;
-}
-
-.equipo-auto{
-    border-radius: 0 5px 0 0;
-    border-top: 3px solid black;
-    border-right: 3px solid black;
-    width: 1fr;
-}
-
-.teamates{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    gap: 2%;
-}
-
-.teamate1{
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
-    border-radius: 0 0 20px 0;
-    width: 100%;
-}
-
-.auto-f1{
-    position: relative;
-    left: 25%;
-}
-
-.teamate2{
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
-    border-radius: 0 0 20px 0;
-    width: 100%;
-    margin-right: 2%;
-}
-
-.equipos-grid hr{
-    width: 95%;
-    margin: 2%;
-}
-
-.cabecera-piloto{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-right: 2%;
-}
-
-.cabecera-piloto div{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.equipo-auto h1{
-    font-weight: bold;
-    font-size: 380%;
-}
-
-.cabecera-piloto h2{
-    color: black;
-    font-size: 200%;
-}
-
-
-.teamate1 h4{
-    color: rgba(0, 0, 0, 0.493);
-    font-size: 100%;
-}
-
-.teamate1 h3{
-    font-weight: bold;
-    color: black;
-    font-size: 130%;
-    margin: 0;
-}
-
-.teamate2 h4{
-    color: rgba(0, 0, 0, 0.493);
-    font-size: 100%;
-}
-
-.teamate2 h3{
-    color: black;
-    font-weight: bold;
-    font-size: 130%;
-    margin: 0;
-}
-
-.equipo-auto {
-    color: rgba(0, 0, 0, 0.493);
-    font-size: 100%;
-    width: 150%;
-}
-
-.num-piloto{
-    color: red;
-    font-size: 50px;
-    margin: 0; 
-}
-
-@media screen and (max-width:575px){
-
-
-.f1-icon-m{
-    display: block;
-    height: 50px;
-    margin-right:8% ;
-}
- 
-
-/* Main */
-
-main{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-.contenedor-grid{
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 40% 20% 20% 20%;
-    grid-template-areas: 
-    "newvid newvid"
-    "colvid1 colvid2"
-    "colvid1 colvid2"
-    "colvid1 colvid2"
-    "morenews morenews";
-    gap: 2%;
-    /* padding-bottom: 40px; */
-}
-
-.newvid{
-    border-right: 0;
-    border-radius: 25px 25px 0 0;
-    margin-bottom: 65%;
-    gap: 0;
-    justify-content: start;
-}
-.colvid1{
-    margin-left: 0;
-    margin-right: 3%;
-    padding: 0;
-    gap: 2%;
-    justify-content: start;
-}
-
-.colvid2{
-    margin-left: 3%;
-    margin-right: 0;
-    padding: 0;
-    gap: 2%;
-    justify-content: start;
-}
-
-.colvid1 .card{
-    height: 280px;
-}
-
-.colvid2 .card{
-    height: 280px;
-}
-
-.morenews{
-    margin-top: -25%;
-    display: flex;
-    flex-direction: column;
-}
-    
-/* Footer */
-
-footer{
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap");
+@import 'animate.css';
+.container-fluid {
+  align-items: end;
+}
+.container-fluid h1 {
+  margin: 0;
+  padding: 0;
+}
+.container-fluid div ul .nav-link {
+  display: inline-block;
+  position: relative;
+}
+.container-fluid div ul .nav-link:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: red;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+.container-fluid div ul .nav-link:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+}
+footer .f1-icon {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  height: 56px;
+  width: 100px;
+}
+footer .derechos {
+  font-size: small;
+  padding-top: 3.5%;
+  position: relative;
+  left: 5%;
+  bottom: 0;
+  color: white;
+}
+footer div ul {
+  position: relative;
+  margin: 0;
+  bottom: 0;
+  right: 0;
+  width: 280px;
+}
+footer div ul a {
+  text-decoration: none;
+}
+footer div ul a i {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: 4px solid white;
+  border-radius: 50%;
+  font-size: 25px;
+  color: white;
+}
+
+@media screen and (max-width: 480px) {
+  body footer {
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
     background-color: black;
-
-}
-
-.derechos{
+  }
+  body footer .f1-icon {
+    display: none;
+  }
+  body footer .derechos {
     position: relative;
     left: 0;
     color: white;
     padding: 0;
     font-size: 8px;
-}
-
-.f1-icon{
-    display: none;
-}
-
-.iconos i{
+  }
+  body footer .iconos i {
     position: relative;
     right: 0;
     color: white;
     border: white;
+  }
 }
 
-.contmorenew{
-    display: none;
+.video-head {
+  background-color: black;
+  padding-top: 10px;
 }
-.carousel{
+.video-head h1 {
+  color: white;
+  padding: 2%;
+  font-size: 3rem;
+}
+.video-head .st-v {
+  position: relative;
+  border-top: 8px solid red;
+  border-right: 8px solid red;
+  border-bottom: 8px solid red;
+  border-radius: 0 20px 20px 0;
+  padding: 2% 2% 2% 0;
+  margin: 5%;
+}
+.video-head .st-v h2 {
+  position: absolute;
+  top: -5%;
+  left: 0%;
+  color: white;
+  background-color: black;
+  padding-right: 10px;
+}
+.video-head .st-v .start-v {
+  display: flex;
+  gap: 2%;
+  height: 500px;
+  width: 100%;
+}
+.video-head .st-v .start-v .vid-start-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border: 2px 2px 2px 0 solid grey;
+}
+.video-head h2 {
+  color: white;
+  position: relative;
+  left: 2%;
+}
+.video-head .vid-features {
+  padding: 5%;
+}
+
+.highlights {
+  padding-top: 2%;
+  background-color: rgb(241, 241, 241);
+}
+.highlights h2 {
+  position: relative;
+  left: 2%;
+}
+.highlights .cont-high {
+  padding: 2%;
+  margin: 0 2% 0 2%;
+  border-top: 5px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.highlights .cont-high .card-high {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: stretch;
+  font-size: 70%;
+  background-color: white;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 2px 2px 20px;
+  border-bottom: 2px solid rgb(61, 61, 61);
+  border-right: 2px solid rgb(61, 61, 61);
+  transition: transform 2;
+}
+.highlights .cont-high .card-high:hover {
+  transform: scale(1.1);
+}
+.highlights .cont-high .card-high iframe {
+  height: 250px;
+}
+.highlights .cont-high .card-high .card-body-high {
+  height: 100px;
+  text-align: center;
+  padding-top: 5%;
+}
+
+.related {
+  padding-bottom: 2%;
+  background-color: rgb(241, 241, 241);
+}
+.related h1 {
+  padding-left: 2%;
+}
+.related .grid-related {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 2%;
+  margin: 2% 2% 5% 2%;
+}
+.related .grid-related .grid-rel-fila {
+  display: flex;
+  justify-content: center;
+  gap: 4%;
+}
+.related .grid-related .grid-rel-fila .video-f1 {
+  background-color: white;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 0 0 20px 20px;
+  transition: transform 2;
+}
+.related .grid-related .grid-rel-fila .video-f1:hover {
+  transform: scale(1.1);
+}
+.related .grid-related .grid-rel-fila .video-f1 a {
+  text-decoration: none;
+}
+.related .grid-related .grid-rel-fila .video-f1 a .video-play {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+.related .grid-related .grid-rel-fila .video-f1 a .img-video-f1 {
+  width: 100%;
+  height: 100%;
+}
+.related .grid-related .grid-rel-fila .video-f1 a .bi-play-fill {
+  position: absolute;
+  display: flex;
+  left: 0;
+  bottom: 0;
+  background-color: red;
+  color: white;
+  height: 40px;
+  width: 50px;
+  font-size: 30px;
+  align-items: center;
+  justify-content: center;
+}
+.related .grid-related .grid-rel-fila .video-f1 a .text-video {
+  text-decoration: none;
+  color: black;
+  padding: 3%;
+  text-align: start;
+}
+
+@media screen and (max-width: 480px) {
+  body main .video-head h1 {
+    font-size: 30px;
+    padding-left: 5%;
+  }
+  body main .video-head .st-v {
+    padding: 2% 2% 2% 2%;
+    border-left: 8px solid red;
+    border-radius: 20px 20px 50px 50px;
+    border-bottom: 0px solid black;
+  }
+  body main .video-head .st-v h2 {
+    left: 28%;
+    padding-left: 10px;
+  }
+  body main .video-head .st-v .start-v {
+    flex-direction: column;
+  }
+  body main .video-head .st-v .vid-start-2 {
+    padding: 0 20px 0 20px;
+  }
+  body main .video-head h2 {
+    font-size: 25px;
+    padding-left: 5%;
+  }
+  body main .highlights .cont-high {
+    flex-direction: column;
+  }
+  body main .highlights .cont-high .card-high {
+    height: 300px;
+  }
+  body main .related {
+    padding-bottom: 32%;
+    gap: 2%;
+  }
+  body main .related h1 {
+    padding-top: 15px;
+    font-size: 25px;
+    padding-left: 5%;
+    padding-bottom: 20px;
+  }
+  body main .related .grid-related .grid-rel-fila {
+    flex-direction: column;
+    gap: 3%;
+  }
+  body main .related .grid-related .grid-rel-fila .video-f1 {
+    width: 100%;
+  }
+  body main .related .grid-related .grid-rel-fila .video-f1 a {
+    display: flex;
+  }
+  body main .related .grid-related .grid-rel-fila .video-f1 a .video-play .img-video-f1 {
+    width: 210px;
+    height: 200px;
+  }
+}
+
+.contitulo {
+  border-top: 5px solid black;
+  border-right: 5px solid black;
+  border-radius: 0 5px 0 0;
+  margin: 2% 5% 0 5%;
+  padding-top: 1%;
+}
+.contitulo div {
+  width: 100%;
+  background-color: rgb(182, 182, 182);
+  padding: 0.5%;
+  text-align: center;
+  border-radius: 7px;
+}
+
+.pilotos-grid {
+  display: grid;
+  grid-template-rows: repeat(5, 0.5fr);
+  gap: 2%;
+  margin-top: 50px;
+}
+.pilotos-grid hr {
+  width: 95%;
+  margin: 2%;
+}
+.pilotos-grid .filas {
+  padding: 0 10% 0 10%;
+  display: flex;
+  justify-content: center;
+  gap: 4%;
+}
+.pilotos-grid .filas-4 {
+  padding: 0 4% 0 4%;
+  display: flex;
+  justify-content: center;
+  gap: 2%;
+}
+
+.pilotos {
+  border-radius: 0 5px 0 0;
+  border-top: 3px solid black;
+  border-right: 3px solid black;
+  width: 1fr;
+}
+.pilotos .cabecera-piloto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 2%;
+}
+.pilotos .cabecera-piloto h1 {
+  font-weight: bold;
+  font-size: 380%;
+}
+.pilotos .cabecera-piloto div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pilotos .cabecera-piloto h2 {
+  color: black;
+  font-size: 200%;
+}
+.pilotos .cabecera-piloto h3 {
+  color: white;
+  border-radius: 5px;
+  font-size: 155%;
+}
+.pilotos .nombre-piloto {
+  display: flex;
+  align-items: center;
+  border-left: 5px solid blue;
+  justify-content: space-between;
+}
+.pilotos .nombre-piloto div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 2%;
+  min-width: 190px;
+}
+.pilotos .nombre-piloto div h4 {
+  color: rgba(0, 0, 0, 0.493);
+  font-size: 100%;
+}
+.pilotos .nombre-piloto div h3 {
+  font-size: 130%;
+  margin: 0;
+}
+.pilotos .nombre-piloto img {
+  width: 18%;
+  padding-right: 2%;
+}
+.pilotos .cara-piloto {
+  display: flex;
+  justify-content: space-between;
+}
+.pilotos .cara-piloto .piloto-texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.pilotos .cara-piloto .piloto-texto .equipo {
+  color: rgba(0, 0, 0, 0.493);
+  font-size: 100%;
+  width: 150%;
+}
+.pilotos .cara-piloto .piloto-texto .num-piloto {
+  color: red;
+  font-size: 50px;
+  margin: 0;
+}
+.pilotos .cara-piloto .piloto {
+  width: 206px;
+  height: 206px;
+}
+
+@media screen and (max-width: 480px) {
+  body main .pilotos-grid {
+    padding-top: 2%;
+    height: 5750px;
+  }
+  body main .pilotos-grid .filas {
+    flex-direction: column;
+  }
+  body main .pilotos-grid .filas-4 {
+    padding: 0 10% 0 10%;
+    flex-direction: column;
+  }
+}
+
+.posiciones {
+  display: flex;
+  height: 200px;
+  align-items: center;
+  justify-content: center;
+}
+
+.podium {
+  display: flex;
+  justify-content: center;
+  gap: 2%;
+  align-items: end;
+  padding: 0 2% 0 2%;
+}
+.podium .puesto2 {
+  width: 90%;
+}
+.podium .puesto2 .podio-piloto h1 {
+  position: absolute;
+  left: 8%;
+  bottom: 52%;
+}
+.podium .puesto2 .name-podio .pais2 {
+  width: 22%;
+}
+.podium .puesto1 {
+  width: 100%;
+}
+.podium .puesto1 .name-podio .pais1 {
+  width: 22%;
+}
+.podium .puesto3 {
+  width: 80%;
+}
+.podium .puesto3 .podio-piloto h1 {
+  position: absolute;
+  left: 8%;
+  bottom: 52%;
+  bottom: 70%;
+  font-size: 500%;
+}
+.podium .puesto3 .name-podio .pais3 {
+  width: 22%;
+}
+
+.podio, .podium .puesto2, .podium .puesto1, .podium .puesto3 {
+  display: flex;
+  flex-direction: column;
+  border-radius: 25px;
+  box-shadow: 5px 5px 20px;
+}
+.podio .podio-piloto, .podium .puesto2 .podio-piloto, .podium .puesto1 .podio-piloto, .podium .puesto3 .podio-piloto {
+  border-bottom: 8px solid red;
+  position: relative;
+  height: 100%;
+}
+.podio .podio-piloto h1, .podium .puesto2 .podio-piloto h1, .podium .puesto1 .podio-piloto h1, .podium .puesto3 .podio-piloto h1 {
+  position: absolute;
+  left: 5%;
+  bottom: 70%;
+  font-size: 500%;
+}
+.podio .podio-piloto .podio-img, .podium .puesto2 .podio-piloto .podio-img, .podium .puesto1 .podio-piloto .podio-img, .podium .puesto3 .podio-piloto .podio-img {
+  width: 100%;
+}
+.podio .name-podio, .podium .puesto2 .name-podio, .podium .puesto1 .name-podio, .podium .puesto3 .name-podio {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  padding: 5%;
+  width: 100%;
+  border-radius: 0 0 25px 25px;
+}
+.podio .name-podio h3, .podium .puesto2 .name-podio h3, .podium .puesto1 .name-podio h3, .podium .puesto3 .name-podio h3, .podio .name-podio h1, .podium .puesto2 .name-podio h1, .podium .puesto1 .name-podio h1, .podium .puesto3 .name-podio h1 {
+  font-size: 170%;
+}
+
+.position-pilotos {
+  margin: 2% 5% 2% 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.position-pilotos .stand {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  background-color: rgb(250, 245, 239);
+  padding-left: 20px;
+  border-radius: 20px;
+}
+.position-pilotos .stand .st-name {
+  display: flex;
+  align-items: center;
+  gap: 2%;
+  width: 80%;
+}
+.position-pilotos .stand .st-name h2 {
+  border-right: 3px solid red;
+  padding-right: 2%;
+}
+.position-pilotos .stand .points {
+  display: flex;
+  align-items: center;
+  padding: 8px 20px 8px 20px;
+}
+.position-pilotos .stand .points h2 {
+  background-color: black;
+  border-radius: 20px;
+  color: white;
+  margin: 0;
+}
+.position-pilotos .stand .points i {
+  font-size: 40px;
+}
+
+.f1topics {
+  position: relative;
+}
+.f1topics h2 {
+  background-color: white;
+  position: absolute;
+  top: -15px;
+  left: 0;
+  padding-right: 10px;
+}
+.f1topics .f1-new-topics {
+  border-top: 8px solid black;
+  border-right: 8px solid black;
+  border-radius: 0 20px 0 0;
+  padding-top: 2%;
+  padding-right: 2%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  width: 100%;
+}
+.f1topics .f1-new-topics h3 {
+  color: white;
+}
+.f1topics .f1-new-topics .refs-e {
+  display: flex;
+  background-image: url(../img/e-sport.jpg);
+  background-repeat: none;
+  background-size: 100%;
+  height: 170px;
+  width: 302px;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.f1topics .f1-new-topics .refs-s {
+  display: flex;
+  position: relative;
+  background-image: url(https://media.formula1.com/image/upload/f_auto/q_auto/v1679313708/fom-website/2018-redesign-assets/Tag%20collections/Other/NetZero_Car_i4_i3_0004.jpg.transform/5col/image.jpg);
+  background-repeat: none;
+  background-size: 100%;
+  height: 170px;
+  width: 302px;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.f1topics .f1-new-topics .refs-p {
+  display: flex;
+  position: relative;
+  background-image: url(https://media.formula1.com/image/upload/content/dam/fom-website/2018-redesign-assets/Tag%20collections/Other/Beyond%20The%20Grid%20Header%202023.png.transform/5col/image.png);
+  background-repeat: none;
+  background-size: 100%;
+  height: 170px;
+  width: 302px;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.f1topics .f1-new-topics .refs-c {
+  display: flex;
+  position: relative;
+  background-image: url(https://media.formula1.com/image/upload/content/dam/fom-website/2018-redesign-assets/Tag%20collections/Other/Race-calendar.jpg.transform/5col/image.jpg);
+  background-repeat: none;
+  background-size: 100%;
+  height: 170px;
+  width: 302px;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  text-align: center;
+}
+
+@media screen and (max-width: 750px) {
+  body main .posiciones {
+    height: 60px;
+  }
+  body main .podium .puesto2 {
+    display: none;
+  }
+  body main .podium .puesto1 {
+    width: 340px;
+    margin: 10px 0px 30px 0px;
+  }
+  body main .podium .puesto1 .podio .podio-piloto h1, body main .podium .puesto1 .puesto2 .podio-piloto h1, body main .podium .puesto1 .puesto1 .podio-piloto h1, body main .podium .puesto1 .puesto3 .podio-piloto h1 {
+    left: 6%;
+    bottom: 67%;
+    font-size: 401%;
+  }
+  body main .podium .puesto1 .podio .name-podio, body main .podium .puesto1 .puesto2 .name-podio, body main .podium .puesto1 .puesto1 .name-podio, body main .podium .puesto1 .puesto3 .name-podio {
+    align-items: center;
+  }
+  body main .podium .puesto1 .podio .name-podio div, body main .podium .puesto1 .puesto2 .name-podio div, body main .podium .puesto1 .puesto1 .name-podio div, body main .podium .puesto1 .puesto3 .name-podio div {
+    font-size: small;
+  }
+  body main .podium .puesto1 .podio .name-podio img, body main .podium .puesto1 .puesto2 .name-podio img, body main .podium .puesto1 .puesto1 .name-podio img, body main .podium .puesto1 .puesto3 .name-podio img {
+    width: 25%;
+    height: 30%;
+  }
+  body main .podium .puesto3 {
+    display: none;
+  }
+  body main .position-pilotos {
+    gap: 3px;
+    margin: 0% 2% 8% 2%;
+  }
+  body main .position-pilotos .stand {
+    padding: 0;
+  }
+  body main .position-pilotos .stand .st-name {
+    gap: 0;
+    width: 300px;
+    padding-right: 50px;
+    padding-left: 6%;
+  }
+  body main .position-pilotos .stand .st-name h2 {
+    font-size: larger;
+    padding-right: 15px;
+    margin: 0;
+    width: 40px;
+  }
+  body main .position-pilotos .stand .st-name h3 {
+    display: none;
+  }
+  body main .position-pilotos .stand .st-name h1 {
+    margin: 0;
+    padding-left: 5%;
+    font-size: larger;
+  }
+  body main .position-pilotos .stand .st-name p {
+    display: none;
+  }
+  body main .position-pilotos .stand .points h2 {
+    font-size: large;
+    border-radius: 20px;
+    width: 95px;
+  }
+  body main .position-pilotos .stand .points i {
+    font-size: 25px;
+  }
+  body main .f1topics {
+    padding: 25px 10px 3px 10px;
+  }
+  body main .f1topics h2 {
+    left: 159px;
+  }
+  body main .f1topics .f1-new-topics {
+    flex-direction: column;
+    padding-top: 6%;
+    padding-bottom: 4%;
+  }
+  body main .f1topics .f1-new-topics .refs-e {
+    width: 390px;
+    transition: transform 2;
+  }
+  body main .f1topics .f1-new-topics .refs-e:hover {
+    transform: scale(1.1);
+  }
+  body main .f1topics .f1-new-topics .refs-s {
+    width: 390px;
+    transition: transform 2;
+  }
+  body main .f1topics .f1-new-topics .refs-s:hover {
+    transform: scale(1.1);
+  }
+  body main .f1topics .f1-new-topics .refs-p {
+    width: 390px;
+    transition: transform 2;
+  }
+  body main .f1topics .f1-new-topics .refs-p:hover {
+    transform: scale(1.1);
+  }
+  body main .f1topics .f1-new-topics .refs-c {
+    width: 390px;
+    transition: transform 2;
+  }
+  body main .f1topics .f1-new-topics .refs-c:hover {
+    transform: scale(1.1);
+  }
+}
+
+.contenedor-grid {
+  display: grid;
+  margin: 4% 5% 2% 5%;
+  grid-template-columns: 50% 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "newvid colvid1 colvid2" "newvid colvid1 colvid2" "newvid colvid1 colvid2" "newvid colvid1 colvid2";
+}
+.contenedor-grid .newvid {
+  grid-area: newvid;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5%;
+  border-top: 8px solid black;
+  border-right: 8px solid black;
+  border-radius: 0 25px 0 0;
+  padding: 2% 2% 0 0;
+}
+.colvid1 {
+  grid-area: colvid1;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  padding-right: 5px;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+.colvid2 {
+  grid-area: colvid2;
+  display: flex;
+  flex-direction: column;
+  padding-left: 5px;
+  padding-right: 10px;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+.card, .morenews .contmorenew .card, .contenedor-grid .newvid .morenews .contmorenew .card, .morenews .contmorenew .contenedor-grid .newvid .card, .colvid1 .morenews .contmorenew .card, .morenews .contmorenew .colvid1 .card, .colvid1 .contenedor-grid .newvid .morenews .contmorenew .card, .morenews .contmorenew .colvid1 .contenedor-grid .newvid .card, .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card, .morenews .contmorenew .contenedor-grid .newvid .colvid1 .card, .colvid1 .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card, .morenews .contmorenew .colvid1 .contenedor-grid .newvid .colvid1 .card, .colvid2 .morenews .contmorenew .card, .morenews .contmorenew .colvid2 .card, .colvid2 .contenedor-grid .newvid .morenews .contmorenew .card, .morenews .contmorenew .colvid2 .contenedor-grid .newvid .card, .contenedor-grid .newvid .colvid2 .morenews .contmorenew .card, .morenews .contmorenew .contenedor-grid .newvid .colvid2 .card, .colvid1 .colvid2 .morenews .contmorenew .card, .morenews .contmorenew .colvid1 .colvid2 .card, .colvid2 .colvid1 .morenews .contmorenew .card, .morenews .contmorenew .colvid2 .colvid1 .card, .colvid1 .colvid2 .contenedor-grid .newvid .morenews .contmorenew .card, .morenews .contmorenew .colvid1 .colvid2 .contenedor-grid .newvid .card, .colvid2 .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card, .morenews .contmorenew .colvid2 .contenedor-grid .newvid .colvid1 .card, .colvid1 .contenedor-grid .newvid .colvid2 .morenews .contmorenew .card, .morenews .contmorenew .colvid1 .contenedor-grid .newvid .colvid2 .card, .contenedor-grid .newvid .colvid2 .colvid1 .morenews .contmorenew .card, .morenews .contmorenew .contenedor-grid .newvid .colvid2 .colvid1 .card, .colvid2 .colvid1 .contenedor-grid .newvid .morenews .contmorenew .card, .morenews .contmorenew .colvid2 .colvid1 .contenedor-grid .newvid .card, .contenedor-grid .newvid .colvid1 .colvid2 .morenews .contmorenew .card, .morenews .contmorenew .contenedor-grid .newvid .colvid1 .colvid2 .card, .colvid1 .contenedor-grid .newvid .colvid1 .colvid2 .morenews .contmorenew .card, .morenews .contmorenew .colvid1 .contenedor-grid .newvid .colvid1 .colvid2 .card, .colvid2 .colvid1 .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card, .morenews .contmorenew .colvid2 .colvid1 .contenedor-grid .newvid .colvid1 .card, .colvid1 .colvid2 .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card, .morenews .contmorenew .colvid1 .colvid2 .contenedor-grid .newvid .colvid1 .card, .colvid1 .contenedor-grid .newvid .colvid2 .colvid1 .morenews .contmorenew .card, .morenews .contmorenew .colvid1 .contenedor-grid .newvid .colvid2 .colvid1 .card, .colvid2 .contenedor-grid .newvid .colvid2 .morenews .contmorenew .card, .morenews .contmorenew .colvid2 .contenedor-grid .newvid .colvid2 .card, .contenedor-grid .newvid .card, .contenedor-grid .newvid .morenews .contmorenew .card, .morenews .contmorenew .contenedor-grid .newvid .card, .contenedor-grid .newvid .morenews .contmorenew .card, .morenews .contmorenew .contenedor-grid .newvid .card, .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card, .colvid1 .morenews .contmorenew .contenedor-grid .newvid .card, .contenedor-grid .newvid .morenews .contmorenew .colvid1 .card, .morenews .contmorenew .colvid1 .contenedor-grid .newvid .card, .colvid1 .contenedor-grid .newvid .morenews .contmorenew .card, .morenews .contmorenew .colvid1 .contenedor-grid .newvid .card, .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card, .morenews .contmorenew .contenedor-grid .newvid .colvid1 .card, .colvid1 .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card, .morenews .contmorenew .colvid1 .contenedor-grid .newvid .colvid1 .card, .contenedor-grid .newvid .colvid2 .morenews .contmorenew .card, .colvid2 .morenews .contmorenew .contenedor-grid .newvid .card, .contenedor-grid .newvid .morenews .contmorenew .colvid2 .card, .morenews .contmorenew .colvid2 .contenedor-grid .newvid .card, .colvid2 .contenedor-grid .newvid .morenews .contmorenew .card, .morenews .contmorenew .colvid2 .contenedor-grid .newvid .card, .contenedor-grid .newvid .colvid2 .morenews .contmorenew .card, .morenews .contmorenew .contenedor-grid .newvid .colvid2 .card, .contenedor-grid .newvid .colvid1 .colvid2 .morenews .contmorenew .card, .colvid1 .colvid2 .morenews .contmorenew .contenedor-grid .newvid .card, .contenedor-grid .newvid .morenews .contmorenew .colvid1 .colvid2 .card, .morenews .contmorenew .colvid1 .colvid2 .contenedor-grid .newvid .card, .contenedor-grid .newvid .colvid2 .colvid1 .morenews .contmorenew .card, .colvid2 .colvid1 .morenews .contmorenew .contenedor-grid .newvid .card, .contenedor-grid .newvid .morenews .contmorenew .colvid2 .colvid1 .card, .morenews .contmorenew .colvid2 .colvid1 .contenedor-grid .newvid .card, .colvid1 .colvid2 .contenedor-grid .newvid .morenews .contmorenew .card, .morenews .contmorenew .colvid1 .colvid2 .contenedor-grid .newvid .card, .colvid2 .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card, .morenews .contmorenew .colvid2 .contenedor-grid .newvid .colvid1 .card, .colvid1 .contenedor-grid .newvid .colvid2 .morenews .contmorenew .card, .morenews .contmorenew .colvid1 .contenedor-grid .newvid .colvid2 .card, .contenedor-grid .newvid .colvid2 .colvid1 .morenews .contmorenew .card, .morenews .contmorenew .contenedor-grid .newvid .colvid2 .colvid1 .card, .colvid2 .colvid1 .contenedor-grid .newvid .morenews .contmorenew .card, .morenews .contmorenew .colvid2 .colvid1 .contenedor-grid .newvid .card, .contenedor-grid .newvid .colvid1 .colvid2 .morenews .contmorenew .card, .morenews .contmorenew .contenedor-grid .newvid .colvid1 .colvid2 .card, .colvid1 .contenedor-grid .newvid .colvid1 .colvid2 .morenews .contmorenew .card, .morenews .contmorenew .colvid1 .contenedor-grid .newvid .colvid1 .colvid2 .card, .colvid2 .colvid1 .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card, .morenews .contmorenew .colvid2 .colvid1 .contenedor-grid .newvid .colvid1 .card, .colvid1 .colvid2 .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card, .morenews .contmorenew .colvid1 .colvid2 .contenedor-grid .newvid .colvid1 .card, .colvid1 .contenedor-grid .newvid .colvid2 .colvid1 .morenews .contmorenew .card, .morenews .contmorenew .colvid1 .contenedor-grid .newvid .colvid2 .colvid1 .card, .colvid2 .contenedor-grid .newvid .colvid2 .morenews .contmorenew .card, .morenews .contmorenew .colvid2 .contenedor-grid .newvid .colvid2 .card, .colvid1 .card, .colvid1 .morenews .contmorenew .card, .morenews .contmorenew .colvid1 .card, .colvid1 .contenedor-grid .newvid .morenews .contmorenew .card, .contenedor-grid .newvid .morenews .contmorenew .colvid1 .card, .colvid1 .morenews .contmorenew .contenedor-grid .newvid .card, .morenews .contmorenew .contenedor-grid .newvid .colvid1 .card, .colvid1 .morenews .contmorenew .card, .morenews .contmorenew .colvid1 .card, .colvid1 .contenedor-grid .newvid .morenews .contmorenew .card, .morenews .contmorenew .colvid1 .contenedor-grid .newvid .card, .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card, .morenews .contmorenew .contenedor-grid .newvid .colvid1 .card, .colvid1 .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card, .morenews .contmorenew .colvid1 .contenedor-grid .newvid .colvid1 .card, .colvid1 .colvid2 .morenews .contmorenew .card, .colvid2 .morenews .contmorenew .colvid1 .card, .colvid1 .morenews .contmorenew .colvid2 .card, .morenews .contmorenew .colvid2 .colvid1 .card, .colvid1 .colvid2 .contenedor-grid .newvid .morenews .contmorenew .card, .colvid2 .contenedor-grid .newvid .morenews .contmorenew .colvid1 .card, .colvid1 .morenews .contmorenew .colvid2 .contenedor-grid .newvid .card, .morenews .contmorenew .colvid2 .contenedor-grid .newvid .colvid1 .card, .colvid1 .contenedor-grid .newvid .colvid2 .morenews .contmorenew .card, .contenedor-grid .newvid .colvid2 .morenews .contmorenew .colvid1 .card, .colvid1 .morenews .contmorenew .contenedor-grid .newvid .colvid2 .card, .morenews .contmorenew .contenedor-grid .newvid .colvid2 .colvid1 .card, .colvid1 .colvid2 .morenews .contmorenew .card, .morenews .contmorenew .colvid1 .colvid2 .card, .colvid2 .colvid1 .morenews .contmorenew .card, .morenews .contmorenew .colvid2 .colvid1 .card, .colvid1 .colvid2 .contenedor-grid .newvid .morenews .contmorenew .card, .morenews .contmorenew .colvid1 .colvid2 .contenedor-grid .newvid .card, .colvid2 .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card, .morenews .contmorenew .colvid2 .contenedor-grid .newvid .colvid1 .card, .colvid1 .contenedor-grid .newvid .colvid2 .morenews .contmorenew .card, .morenews .contmorenew .colvid1 .contenedor-grid .newvid .colvid2 .card, .contenedor-grid .newvid .colvid2 .colvid1 .morenews .contmorenew .card, .morenews .contmorenew .contenedor-grid .newvid .colvid2 .colvid1 .card, .colvid2 .colvid1 .contenedor-grid .newvid .morenews .contmorenew .card, .morenews .contmorenew .colvid2 .colvid1 .contenedor-grid .newvid .card, .contenedor-grid .newvid .colvid1 .colvid2 .morenews .contmorenew .card, .morenews .contmorenew .contenedor-grid .newvid .colvid1 .colvid2 .card, .colvid1 .contenedor-grid .newvid .colvid1 .colvid2 .morenews .contmorenew .card, .morenews .contmorenew .colvid1 .contenedor-grid .newvid .colvid1 .colvid2 .card, .colvid2 .colvid1 .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card, .morenews .contmorenew .colvid2 .colvid1 .contenedor-grid .newvid .colvid1 .card, .colvid1 .colvid2 .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card, .morenews .contmorenew .colvid1 .colvid2 .contenedor-grid .newvid .colvid1 .card, .colvid1 .contenedor-grid .newvid .colvid2 .colvid1 .morenews .contmorenew .card, .morenews .contmorenew .colvid1 .contenedor-grid .newvid .colvid2 .colvid1 .card, .colvid1 .colvid2 .contenedor-grid .newvid .colvid2 .morenews .contmorenew .card, .colvid2 .contenedor-grid .newvid .colvid2 .morenews .contmorenew .colvid1 .card, .colvid1 .morenews .contmorenew .colvid2 .contenedor-grid .newvid .colvid2 .card, .morenews .contmorenew .colvid2 .contenedor-grid .newvid .colvid2 .colvid1 .card, .colvid2 .card, .colvid2 .morenews .contmorenew .card, .morenews .contmorenew .colvid2 .card, .colvid2 .contenedor-grid .newvid .morenews .contmorenew .card, .contenedor-grid .newvid .morenews .contmorenew .colvid2 .card, .colvid2 .morenews .contmorenew .contenedor-grid .newvid .card, .morenews .contmorenew .contenedor-grid .newvid .colvid2 .card, .colvid2 .colvid1 .morenews .contmorenew .card, .colvid1 .morenews .contmorenew .colvid2 .card, .colvid2 .morenews .contmorenew .colvid1 .card, .morenews .contmorenew .colvid1 .colvid2 .card, .colvid2 .colvid1 .contenedor-grid .newvid .morenews .contmorenew .card, .colvid1 .contenedor-grid .newvid .morenews .contmorenew .colvid2 .card, .colvid2 .morenews .contmorenew .colvid1 .contenedor-grid .newvid .card, .morenews .contmorenew .colvid1 .contenedor-grid .newvid .colvid2 .card, .colvid2 .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card, .contenedor-grid .newvid .colvid1 .morenews .contmorenew .colvid2 .card, .colvid2 .morenews .contmorenew .contenedor-grid .newvid .colvid1 .card, .morenews .contmorenew .contenedor-grid .newvid .colvid1 .colvid2 .card, .colvid2 .colvid1 .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card, .colvid1 .contenedor-grid .newvid .colvid1 .morenews .contmorenew .colvid2 .card, .colvid2 .morenews .contmorenew .colvid1 .contenedor-grid .newvid .colvid1 .card, .morenews .contmorenew .colvid1 .contenedor-grid .newvid .colvid1 .colvid2 .card, .colvid2 .morenews .contmorenew .card, .morenews .contmorenew .colvid2 .card, .colvid2 .contenedor-grid .newvid .morenews .contmorenew .card, .morenews .contmorenew .colvid2 .contenedor-grid .newvid .card, .contenedor-grid .newvid .colvid2 .morenews .contmorenew .card, .morenews .contmorenew .contenedor-grid .newvid .colvid2 .card, .colvid1 .colvid2 .morenews .contmorenew .card, .morenews .contmorenew .colvid1 .colvid2 .card, .colvid2 .colvid1 .morenews .contmorenew .card, .morenews .contmorenew .colvid2 .colvid1 .card, .colvid1 .colvid2 .contenedor-grid .newvid .morenews .contmorenew .card, .morenews .contmorenew .colvid1 .colvid2 .contenedor-grid .newvid .card, .colvid2 .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card, .morenews .contmorenew .colvid2 .contenedor-grid .newvid .colvid1 .card, .colvid1 .contenedor-grid .newvid .colvid2 .morenews .contmorenew .card, .morenews .contmorenew .colvid1 .contenedor-grid .newvid .colvid2 .card, .contenedor-grid .newvid .colvid2 .colvid1 .morenews .contmorenew .card, .morenews .contmorenew .contenedor-grid .newvid .colvid2 .colvid1 .card, .colvid2 .colvid1 .contenedor-grid .newvid .morenews .contmorenew .card, .morenews .contmorenew .colvid2 .colvid1 .contenedor-grid .newvid .card, .contenedor-grid .newvid .colvid1 .colvid2 .morenews .contmorenew .card, .morenews .contmorenew .contenedor-grid .newvid .colvid1 .colvid2 .card, .colvid1 .contenedor-grid .newvid .colvid1 .colvid2 .morenews .contmorenew .card, .morenews .contmorenew .colvid1 .contenedor-grid .newvid .colvid1 .colvid2 .card, .colvid2 .colvid1 .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card, .morenews .contmorenew .colvid2 .colvid1 .contenedor-grid .newvid .colvid1 .card, .colvid1 .colvid2 .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card, .morenews .contmorenew .colvid1 .colvid2 .contenedor-grid .newvid .colvid1 .card, .colvid1 .contenedor-grid .newvid .colvid2 .colvid1 .morenews .contmorenew .card, .morenews .contmorenew .colvid1 .contenedor-grid .newvid .colvid2 .colvid1 .card, .colvid2 .contenedor-grid .newvid .colvid2 .morenews .contmorenew .card, .morenews .contmorenew .colvid2 .contenedor-grid .newvid .colvid2 .card {
+  display: grid;
+  position: relative;
+  align-items: stretch;
+  font-size: 70%;
+  background-color: white;
+}
+.card a, .morenews .contmorenew .card a, .contenedor-grid .newvid .morenews .contmorenew .card a, .morenews .contmorenew .contenedor-grid .newvid .card a, .colvid1 .morenews .contmorenew .card a, .morenews .contmorenew .colvid1 .card a, .colvid1 .contenedor-grid .newvid .morenews .contmorenew .card a, .morenews .contmorenew .colvid1 .contenedor-grid .newvid .card a, .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card a, .morenews .contmorenew .contenedor-grid .newvid .colvid1 .card a, .colvid1 .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card a, .morenews .contmorenew .colvid1 .contenedor-grid .newvid .colvid1 .card a, .colvid2 .morenews .contmorenew .card a, .morenews .contmorenew .colvid2 .card a, .colvid2 .contenedor-grid .newvid .morenews .contmorenew .card a, .morenews .contmorenew .colvid2 .contenedor-grid .newvid .card a, .contenedor-grid .newvid .colvid2 .morenews .contmorenew .card a, .morenews .contmorenew .contenedor-grid .newvid .colvid2 .card a, .colvid1 .colvid2 .morenews .contmorenew .card a, .morenews .contmorenew .colvid1 .colvid2 .card a, .colvid2 .colvid1 .morenews .contmorenew .card a, .morenews .contmorenew .colvid2 .colvid1 .card a, .colvid1 .colvid2 .contenedor-grid .newvid .morenews .contmorenew .card a, .morenews .contmorenew .colvid1 .colvid2 .contenedor-grid .newvid .card a, .colvid2 .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card a, .morenews .contmorenew .colvid2 .contenedor-grid .newvid .colvid1 .card a, .colvid1 .contenedor-grid .newvid .colvid2 .morenews .contmorenew .card a, .morenews .contmorenew .colvid1 .contenedor-grid .newvid .colvid2 .card a, .contenedor-grid .newvid .colvid2 .colvid1 .morenews .contmorenew .card a, .morenews .contmorenew .contenedor-grid .newvid .colvid2 .colvid1 .card a, .colvid2 .colvid1 .contenedor-grid .newvid .morenews .contmorenew .card a, .morenews .contmorenew .colvid2 .colvid1 .contenedor-grid .newvid .card a, .contenedor-grid .newvid .colvid1 .colvid2 .morenews .contmorenew .card a, .morenews .contmorenew .contenedor-grid .newvid .colvid1 .colvid2 .card a, .colvid1 .contenedor-grid .newvid .colvid1 .colvid2 .morenews .contmorenew .card a, .morenews .contmorenew .colvid1 .contenedor-grid .newvid .colvid1 .colvid2 .card a, .colvid2 .colvid1 .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card a, .morenews .contmorenew .colvid2 .colvid1 .contenedor-grid .newvid .colvid1 .card a, .colvid1 .colvid2 .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card a, .morenews .contmorenew .colvid1 .colvid2 .contenedor-grid .newvid .colvid1 .card a, .colvid1 .contenedor-grid .newvid .colvid2 .colvid1 .morenews .contmorenew .card a, .morenews .contmorenew .colvid1 .contenedor-grid .newvid .colvid2 .colvid1 .card a, .colvid2 .contenedor-grid .newvid .colvid2 .morenews .contmorenew .card a, .morenews .contmorenew .colvid2 .contenedor-grid .newvid .colvid2 .card a, .contenedor-grid .newvid .card a, .contenedor-grid .newvid .morenews .contmorenew .card a, .morenews .contmorenew .contenedor-grid .newvid .card a, .contenedor-grid .newvid .morenews .contmorenew .card a, .morenews .contmorenew .contenedor-grid .newvid .card a, .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card a, .colvid1 .morenews .contmorenew .contenedor-grid .newvid .card a, .contenedor-grid .newvid .morenews .contmorenew .colvid1 .card a, .morenews .contmorenew .colvid1 .contenedor-grid .newvid .card a, .colvid1 .contenedor-grid .newvid .morenews .contmorenew .card a, .morenews .contmorenew .colvid1 .contenedor-grid .newvid .card a, .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card a, .morenews .contmorenew .contenedor-grid .newvid .colvid1 .card a, .colvid1 .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card a, .morenews .contmorenew .colvid1 .contenedor-grid .newvid .colvid1 .card a, .contenedor-grid .newvid .colvid2 .morenews .contmorenew .card a, .colvid2 .morenews .contmorenew .contenedor-grid .newvid .card a, .contenedor-grid .newvid .morenews .contmorenew .colvid2 .card a, .morenews .contmorenew .colvid2 .contenedor-grid .newvid .card a, .colvid2 .contenedor-grid .newvid .morenews .contmorenew .card a, .morenews .contmorenew .colvid2 .contenedor-grid .newvid .card a, .contenedor-grid .newvid .colvid2 .morenews .contmorenew .card a, .morenews .contmorenew .contenedor-grid .newvid .colvid2 .card a, .contenedor-grid .newvid .colvid1 .colvid2 .morenews .contmorenew .card a, .colvid1 .colvid2 .morenews .contmorenew .contenedor-grid .newvid .card a, .contenedor-grid .newvid .morenews .contmorenew .colvid1 .colvid2 .card a, .morenews .contmorenew .colvid1 .colvid2 .contenedor-grid .newvid .card a, .contenedor-grid .newvid .colvid2 .colvid1 .morenews .contmorenew .card a, .colvid2 .colvid1 .morenews .contmorenew .contenedor-grid .newvid .card a, .contenedor-grid .newvid .morenews .contmorenew .colvid2 .colvid1 .card a, .morenews .contmorenew .colvid2 .colvid1 .contenedor-grid .newvid .card a, .colvid1 .colvid2 .contenedor-grid .newvid .morenews .contmorenew .card a, .morenews .contmorenew .colvid1 .colvid2 .contenedor-grid .newvid .card a, .colvid2 .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card a, .morenews .contmorenew .colvid2 .contenedor-grid .newvid .colvid1 .card a, .colvid1 .contenedor-grid .newvid .colvid2 .morenews .contmorenew .card a, .morenews .contmorenew .colvid1 .contenedor-grid .newvid .colvid2 .card a, .contenedor-grid .newvid .colvid2 .colvid1 .morenews .contmorenew .card a, .morenews .contmorenew .contenedor-grid .newvid .colvid2 .colvid1 .card a, .colvid2 .colvid1 .contenedor-grid .newvid .morenews .contmorenew .card a, .morenews .contmorenew .colvid2 .colvid1 .contenedor-grid .newvid .card a, .contenedor-grid .newvid .colvid1 .colvid2 .morenews .contmorenew .card a, .morenews .contmorenew .contenedor-grid .newvid .colvid1 .colvid2 .card a, .colvid1 .contenedor-grid .newvid .colvid1 .colvid2 .morenews .contmorenew .card a, .morenews .contmorenew .colvid1 .contenedor-grid .newvid .colvid1 .colvid2 .card a, .colvid2 .colvid1 .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card a, .morenews .contmorenew .colvid2 .colvid1 .contenedor-grid .newvid .colvid1 .card a, .colvid1 .colvid2 .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card a, .morenews .contmorenew .colvid1 .colvid2 .contenedor-grid .newvid .colvid1 .card a, .colvid1 .contenedor-grid .newvid .colvid2 .colvid1 .morenews .contmorenew .card a, .morenews .contmorenew .colvid1 .contenedor-grid .newvid .colvid2 .colvid1 .card a, .colvid2 .contenedor-grid .newvid .colvid2 .morenews .contmorenew .card a, .morenews .contmorenew .colvid2 .contenedor-grid .newvid .colvid2 .card a, .colvid1 .card a, .colvid1 .morenews .contmorenew .card a, .morenews .contmorenew .colvid1 .card a, .colvid1 .contenedor-grid .newvid .morenews .contmorenew .card a, .contenedor-grid .newvid .morenews .contmorenew .colvid1 .card a, .colvid1 .morenews .contmorenew .contenedor-grid .newvid .card a, .morenews .contmorenew .contenedor-grid .newvid .colvid1 .card a, .colvid1 .morenews .contmorenew .card a, .morenews .contmorenew .colvid1 .card a, .colvid1 .contenedor-grid .newvid .morenews .contmorenew .card a, .morenews .contmorenew .colvid1 .contenedor-grid .newvid .card a, .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card a, .morenews .contmorenew .contenedor-grid .newvid .colvid1 .card a, .colvid1 .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card a, .morenews .contmorenew .colvid1 .contenedor-grid .newvid .colvid1 .card a, .colvid1 .colvid2 .morenews .contmorenew .card a, .colvid2 .morenews .contmorenew .colvid1 .card a, .colvid1 .morenews .contmorenew .colvid2 .card a, .morenews .contmorenew .colvid2 .colvid1 .card a, .colvid1 .colvid2 .contenedor-grid .newvid .morenews .contmorenew .card a, .colvid2 .contenedor-grid .newvid .morenews .contmorenew .colvid1 .card a, .colvid1 .morenews .contmorenew .colvid2 .contenedor-grid .newvid .card a, .morenews .contmorenew .colvid2 .contenedor-grid .newvid .colvid1 .card a, .colvid1 .contenedor-grid .newvid .colvid2 .morenews .contmorenew .card a, .contenedor-grid .newvid .colvid2 .morenews .contmorenew .colvid1 .card a, .colvid1 .morenews .contmorenew .contenedor-grid .newvid .colvid2 .card a, .morenews .contmorenew .contenedor-grid .newvid .colvid2 .colvid1 .card a, .colvid1 .colvid2 .morenews .contmorenew .card a, .morenews .contmorenew .colvid1 .colvid2 .card a, .colvid2 .colvid1 .morenews .contmorenew .card a, .morenews .contmorenew .colvid2 .colvid1 .card a, .colvid1 .colvid2 .contenedor-grid .newvid .morenews .contmorenew .card a, .morenews .contmorenew .colvid1 .colvid2 .contenedor-grid .newvid .card a, .colvid2 .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card a, .morenews .contmorenew .colvid2 .contenedor-grid .newvid .colvid1 .card a, .colvid1 .contenedor-grid .newvid .colvid2 .morenews .contmorenew .card a, .morenews .contmorenew .colvid1 .contenedor-grid .newvid .colvid2 .card a, .contenedor-grid .newvid .colvid2 .colvid1 .morenews .contmorenew .card a, .morenews .contmorenew .contenedor-grid .newvid .colvid2 .colvid1 .card a, .colvid2 .colvid1 .contenedor-grid .newvid .morenews .contmorenew .card a, .morenews .contmorenew .colvid2 .colvid1 .contenedor-grid .newvid .card a, .contenedor-grid .newvid .colvid1 .colvid2 .morenews .contmorenew .card a, .morenews .contmorenew .contenedor-grid .newvid .colvid1 .colvid2 .card a, .colvid1 .contenedor-grid .newvid .colvid1 .colvid2 .morenews .contmorenew .card a, .morenews .contmorenew .colvid1 .contenedor-grid .newvid .colvid1 .colvid2 .card a, .colvid2 .colvid1 .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card a, .morenews .contmorenew .colvid2 .colvid1 .contenedor-grid .newvid .colvid1 .card a, .colvid1 .colvid2 .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card a, .morenews .contmorenew .colvid1 .colvid2 .contenedor-grid .newvid .colvid1 .card a, .colvid1 .contenedor-grid .newvid .colvid2 .colvid1 .morenews .contmorenew .card a, .morenews .contmorenew .colvid1 .contenedor-grid .newvid .colvid2 .colvid1 .card a, .colvid1 .colvid2 .contenedor-grid .newvid .colvid2 .morenews .contmorenew .card a, .colvid2 .contenedor-grid .newvid .colvid2 .morenews .contmorenew .colvid1 .card a, .colvid1 .morenews .contmorenew .colvid2 .contenedor-grid .newvid .colvid2 .card a, .morenews .contmorenew .colvid2 .contenedor-grid .newvid .colvid2 .colvid1 .card a, .colvid2 .card a, .colvid2 .morenews .contmorenew .card a, .morenews .contmorenew .colvid2 .card a, .colvid2 .contenedor-grid .newvid .morenews .contmorenew .card a, .contenedor-grid .newvid .morenews .contmorenew .colvid2 .card a, .colvid2 .morenews .contmorenew .contenedor-grid .newvid .card a, .morenews .contmorenew .contenedor-grid .newvid .colvid2 .card a, .colvid2 .colvid1 .morenews .contmorenew .card a, .colvid1 .morenews .contmorenew .colvid2 .card a, .colvid2 .morenews .contmorenew .colvid1 .card a, .morenews .contmorenew .colvid1 .colvid2 .card a, .colvid2 .colvid1 .contenedor-grid .newvid .morenews .contmorenew .card a, .colvid1 .contenedor-grid .newvid .morenews .contmorenew .colvid2 .card a, .colvid2 .morenews .contmorenew .colvid1 .contenedor-grid .newvid .card a, .morenews .contmorenew .colvid1 .contenedor-grid .newvid .colvid2 .card a, .colvid2 .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card a, .contenedor-grid .newvid .colvid1 .morenews .contmorenew .colvid2 .card a, .colvid2 .morenews .contmorenew .contenedor-grid .newvid .colvid1 .card a, .morenews .contmorenew .contenedor-grid .newvid .colvid1 .colvid2 .card a, .colvid2 .colvid1 .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card a, .colvid1 .contenedor-grid .newvid .colvid1 .morenews .contmorenew .colvid2 .card a, .colvid2 .morenews .contmorenew .colvid1 .contenedor-grid .newvid .colvid1 .card a, .morenews .contmorenew .colvid1 .contenedor-grid .newvid .colvid1 .colvid2 .card a, .colvid2 .morenews .contmorenew .card a, .morenews .contmorenew .colvid2 .card a, .colvid2 .contenedor-grid .newvid .morenews .contmorenew .card a, .morenews .contmorenew .colvid2 .contenedor-grid .newvid .card a, .contenedor-grid .newvid .colvid2 .morenews .contmorenew .card a, .morenews .contmorenew .contenedor-grid .newvid .colvid2 .card a, .colvid1 .colvid2 .morenews .contmorenew .card a, .morenews .contmorenew .colvid1 .colvid2 .card a, .colvid2 .colvid1 .morenews .contmorenew .card a, .morenews .contmorenew .colvid2 .colvid1 .card a, .colvid1 .colvid2 .contenedor-grid .newvid .morenews .contmorenew .card a, .morenews .contmorenew .colvid1 .colvid2 .contenedor-grid .newvid .card a, .colvid2 .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card a, .morenews .contmorenew .colvid2 .contenedor-grid .newvid .colvid1 .card a, .colvid1 .contenedor-grid .newvid .colvid2 .morenews .contmorenew .card a, .morenews .contmorenew .colvid1 .contenedor-grid .newvid .colvid2 .card a, .contenedor-grid .newvid .colvid2 .colvid1 .morenews .contmorenew .card a, .morenews .contmorenew .contenedor-grid .newvid .colvid2 .colvid1 .card a, .colvid2 .colvid1 .contenedor-grid .newvid .morenews .contmorenew .card a, .morenews .contmorenew .colvid2 .colvid1 .contenedor-grid .newvid .card a, .contenedor-grid .newvid .colvid1 .colvid2 .morenews .contmorenew .card a, .morenews .contmorenew .contenedor-grid .newvid .colvid1 .colvid2 .card a, .colvid1 .contenedor-grid .newvid .colvid1 .colvid2 .morenews .contmorenew .card a, .morenews .contmorenew .colvid1 .contenedor-grid .newvid .colvid1 .colvid2 .card a, .colvid2 .colvid1 .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card a, .morenews .contmorenew .colvid2 .colvid1 .contenedor-grid .newvid .colvid1 .card a, .colvid1 .colvid2 .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card a, .morenews .contmorenew .colvid1 .colvid2 .contenedor-grid .newvid .colvid1 .card a, .colvid1 .contenedor-grid .newvid .colvid2 .colvid1 .morenews .contmorenew .card a, .morenews .contmorenew .colvid1 .contenedor-grid .newvid .colvid2 .colvid1 .card a, .colvid2 .contenedor-grid .newvid .colvid2 .morenews .contmorenew .card a, .morenews .contmorenew .colvid2 .contenedor-grid .newvid .colvid2 .card a {
+  text-decoration: none;
+  color: black;
+}
+.card a .card-body h5, .morenews .contmorenew .card a .card-body h5, .contenedor-grid .newvid .card a .card-body h5 {
+  color: red;
+}
+
+.morenews h2 {
+  border-bottom: 5px solid black;
+  padding-bottom: 10px;
+  margin: 0 5% 0 5%;
+}
+.morenews .carousel {
+  display: none;
+}
+.morenews .contmorenew {
+  margin: 2% 5% 0 5%;
+}
+.morenews .contmorenew .card {
+  border: none;
+}
+
+@media screen and (max-width: 480px) {
+  body main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  body main .contenedor-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 40% 20% 20% 20%;
+    grid-template-areas: "newvid newvid" "colvid1 colvid2" "colvid1 colvid2" "colvid1 colvid2" "morenews morenews";
+    gap: 2%;
+  }
+  body main .contenedor-grid .newvid {
+    border-right: 0;
+    border-radius: 25px 25px 0 0;
+    margin-bottom: 65%;
+    gap: 0;
+    justify-content: start;
+  }
+  body main .contenedor-grid .colvid1 {
+    margin-left: 0;
+    margin-right: 3%;
+    padding: 0;
+    gap: 2%;
+    justify-content: start;
+  }
+  body main .contenedor-grid .colvid1 .card, body main .contenedor-grid .colvid1 .newvid .card, body main .contenedor-grid .newvid .colvid1 .card, body main .contenedor-grid .colvid1 .card, body main .contenedor-grid .colvid1 .contenedor-grid .newvid .card, body main .contenedor-grid .newvid .colvid1 .card, body main .colvid1 .contenedor-grid .newvid .colvid1 .card, .colvid1 body main .contenedor-grid .newvid .colvid1 .card, body main .contenedor-grid .colvid1 .colvid2 .card, .colvid2 body main .contenedor-grid .colvid1 .card, body main .colvid2 .contenedor-grid .colvid1 .newvid .card, .colvid2 body main .contenedor-grid .colvid1 .newvid .card, body main .colvid2 .contenedor-grid .newvid .colvid1 .card, .colvid2 body main .contenedor-grid .newvid .colvid1 .card, body main .contenedor-grid .colvid1 .newvid .colvid2 .card, body main .contenedor-grid .newvid .colvid2 .colvid1 .card, body main .contenedor-grid .colvid1 .colvid2 .card, body main .contenedor-grid .colvid2 .colvid1 .card, .colvid2 body main .contenedor-grid .colvid1 .card, body main .contenedor-grid .colvid1 .colvid2 .contenedor-grid .newvid .card, body main .colvid2 .contenedor-grid .newvid .colvid1 .card, .colvid2 body main .contenedor-grid .newvid .colvid1 .card, body main .contenedor-grid .colvid1 .contenedor-grid .newvid .colvid2 .card, body main .contenedor-grid .newvid .colvid2 .colvid1 .card, body main .contenedor-grid .colvid2 .colvid1 .contenedor-grid .newvid .card, .colvid2 body main .contenedor-grid .colvid1 .contenedor-grid .newvid .card, body main .contenedor-grid .newvid .colvid1 .colvid2 .card, body main .colvid1 .contenedor-grid .newvid .colvid1 .colvid2 .card, .colvid1 body main .contenedor-grid .newvid .colvid1 .colvid2 .card, body main .colvid2 .colvid1 .contenedor-grid .newvid .colvid1 .card, .colvid2 .colvid1 body main .contenedor-grid .newvid .colvid1 .card, body main .colvid1 .colvid2 .contenedor-grid .newvid .colvid1 .card, .colvid1 .colvid2 body main .contenedor-grid .newvid .colvid1 .card, body main .colvid1 .contenedor-grid .newvid .colvid2 .colvid1 .card, .colvid1 body main .contenedor-grid .newvid .colvid2 .colvid1 .card, body main .colvid2 .contenedor-grid .colvid1 .newvid .colvid2 .card, .colvid2 body main .contenedor-grid .colvid1 .newvid .colvid2 .card, body main .colvid2 .contenedor-grid .newvid .colvid2 .colvid1 .card, .colvid2 body main .contenedor-grid .newvid .colvid2 .colvid1 .card, body main .contenedor-grid .colvid1 .morenews .contmorenew .card, .morenews .contmorenew body main .contenedor-grid .colvid1 .card, body main .contenedor-grid .colvid1 .newvid .morenews .contmorenew .card, body main .contenedor-grid .newvid .morenews .contmorenew .colvid1 .card, body main .morenews .contmorenew .contenedor-grid .colvid1 .newvid .card, .morenews .contmorenew body main .contenedor-grid .colvid1 .newvid .card, body main .morenews .contmorenew .contenedor-grid .newvid .colvid1 .card, .morenews .contmorenew body main .contenedor-grid .newvid .colvid1 .card, body main .contenedor-grid .colvid1 .morenews .contmorenew .card, body main .contenedor-grid .morenews .contmorenew .colvid1 .card, .morenews .contmorenew body main .contenedor-grid .colvid1 .card, body main .contenedor-grid .colvid1 .contenedor-grid .newvid .morenews .contmorenew .card, body main .contenedor-grid .morenews .contmorenew .colvid1 .contenedor-grid .newvid .card, .morenews .contmorenew body main .contenedor-grid .colvid1 .contenedor-grid .newvid .card, body main .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card, body main .morenews .contmorenew .contenedor-grid .newvid .colvid1 .card, .morenews .contmorenew body main .contenedor-grid .newvid .colvid1 .card, body main .colvid1 .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card, .colvid1 body main .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card, body main .morenews .contmorenew .colvid1 .contenedor-grid .newvid .colvid1 .card, .morenews .contmorenew .colvid1 body main .contenedor-grid .newvid .colvid1 .card, body main .contenedor-grid .colvid1 .colvid2 .morenews .contmorenew .card, .colvid2 .morenews .contmorenew body main .contenedor-grid .colvid1 .card, body main .contenedor-grid .colvid1 .morenews .contmorenew .colvid2 .card, .morenews .contmorenew .colvid2 body main .contenedor-grid .colvid1 .card, body main .colvid2 .contenedor-grid .colvid1 .newvid .morenews .contmorenew .card, .colvid2 body main .contenedor-grid .colvid1 .newvid .morenews .contmorenew .card, body main .colvid2 .contenedor-grid .newvid .morenews .contmorenew .colvid1 .card, .colvid2 body main .contenedor-grid .newvid .morenews .contmorenew .colvid1 .card, body main .morenews .contmorenew .colvid2 .contenedor-grid .colvid1 .newvid .card, .morenews .contmorenew .colvid2 body main .contenedor-grid .colvid1 .newvid .card, body main .morenews .contmorenew .colvid2 .contenedor-grid .newvid .colvid1 .card, .morenews .contmorenew .colvid2 body main .contenedor-grid .newvid .colvid1 .card, body main .contenedor-grid .colvid1 .newvid .colvid2 .morenews .contmorenew .card, body main .contenedor-grid .newvid .colvid2 .morenews .contmorenew .colvid1 .card, body main .morenews .contmorenew .contenedor-grid .colvid1 .newvid .colvid2 .card, .morenews .contmorenew body main .contenedor-grid .colvid1 .newvid .colvid2 .card, body main .morenews .contmorenew .contenedor-grid .newvid .colvid2 .colvid1 .card, .morenews .contmorenew body main .contenedor-grid .newvid .colvid2 .colvid1 .card, body main .contenedor-grid .colvid1 .colvid2 .morenews .contmorenew .card, body main .contenedor-grid .morenews .contmorenew .colvid1 .colvid2 .card, .morenews .contmorenew body main .contenedor-grid .colvid1 .colvid2 .card, body main .contenedor-grid .colvid2 .colvid1 .morenews .contmorenew .card, .colvid2 body main .contenedor-grid .colvid1 .morenews .contmorenew .card, body main .contenedor-grid .morenews .contmorenew .colvid2 .colvid1 .card, .morenews .contmorenew .colvid2 body main .contenedor-grid .colvid1 .card, body main .contenedor-grid .colvid1 .colvid2 .contenedor-grid .newvid .morenews .contmorenew .card, body main .contenedor-grid .morenews .contmorenew .colvid1 .colvid2 .contenedor-grid .newvid .card, .morenews .contmorenew body main .contenedor-grid .colvid1 .colvid2 .contenedor-grid .newvid .card, body main .colvid2 .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card, .colvid2 body main .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card, body main .morenews .contmorenew .colvid2 .contenedor-grid .newvid .colvid1 .card, .morenews .contmorenew .colvid2 body main .contenedor-grid .newvid .colvid1 .card, body main .contenedor-grid .colvid1 .contenedor-grid .newvid .colvid2 .morenews .contmorenew .card, body main .contenedor-grid .morenews .contmorenew .colvid1 .contenedor-grid .newvid .colvid2 .card, .morenews .contmorenew body main .contenedor-grid .colvid1 .contenedor-grid .newvid .colvid2 .card, body main .contenedor-grid .newvid .colvid2 .colvid1 .morenews .contmorenew .card, body main .morenews .contmorenew .contenedor-grid .newvid .colvid2 .colvid1 .card, .morenews .contmorenew body main .contenedor-grid .newvid .colvid2 .colvid1 .card, body main .contenedor-grid .colvid2 .colvid1 .contenedor-grid .newvid .morenews .contmorenew .card, .colvid2 body main .contenedor-grid .colvid1 .contenedor-grid .newvid .morenews .contmorenew .card, body main .contenedor-grid .morenews .contmorenew .colvid2 .colvid1 .contenedor-grid .newvid .card, .morenews .contmorenew .colvid2 body main .contenedor-grid .colvid1 .contenedor-grid .newvid .card, body main .contenedor-grid .newvid .colvid1 .colvid2 .morenews .contmorenew .card, body main .morenews .contmorenew .contenedor-grid .newvid .colvid1 .colvid2 .card, .morenews .contmorenew body main .contenedor-grid .newvid .colvid1 .colvid2 .card, body main .colvid1 .contenedor-grid .newvid .colvid1 .colvid2 .morenews .contmorenew .card, .colvid1 body main .contenedor-grid .newvid .colvid1 .colvid2 .morenews .contmorenew .card, body main .morenews .contmorenew .colvid1 .contenedor-grid .newvid .colvid1 .colvid2 .card, .morenews .contmorenew .colvid1 body main .contenedor-grid .newvid .colvid1 .colvid2 .card, body main .colvid2 .colvid1 .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card, .colvid2 .colvid1 body main .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card, body main .morenews .contmorenew .colvid2 .colvid1 .contenedor-grid .newvid .colvid1 .card, .morenews .contmorenew .colvid2 .colvid1 body main .contenedor-grid .newvid .colvid1 .card, body main .colvid1 .colvid2 .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card, .colvid1 .colvid2 body main .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card, body main .morenews .contmorenew .colvid1 .colvid2 .contenedor-grid .newvid .colvid1 .card, .morenews .contmorenew .colvid1 .colvid2 body main .contenedor-grid .newvid .colvid1 .card, body main .colvid1 .contenedor-grid .newvid .colvid2 .colvid1 .morenews .contmorenew .card, .colvid1 body main .contenedor-grid .newvid .colvid2 .colvid1 .morenews .contmorenew .card, body main .morenews .contmorenew .colvid1 .contenedor-grid .newvid .colvid2 .colvid1 .card, .morenews .contmorenew .colvid1 body main .contenedor-grid .newvid .colvid2 .colvid1 .card, body main .colvid2 .contenedor-grid .colvid1 .newvid .colvid2 .morenews .contmorenew .card, .colvid2 body main .contenedor-grid .colvid1 .newvid .colvid2 .morenews .contmorenew .card, body main .colvid2 .contenedor-grid .newvid .colvid2 .morenews .contmorenew .colvid1 .card, .colvid2 body main .contenedor-grid .newvid .colvid2 .morenews .contmorenew .colvid1 .card, body main .morenews .contmorenew .colvid2 .contenedor-grid .colvid1 .newvid .colvid2 .card, .morenews .contmorenew .colvid2 body main .contenedor-grid .colvid1 .newvid .colvid2 .card, body main .morenews .contmorenew .colvid2 .contenedor-grid .newvid .colvid2 .colvid1 .card, .morenews .contmorenew .colvid2 body main .contenedor-grid .newvid .colvid2 .colvid1 .card {
+    height: 280px;
+  }
+  body main .contenedor-grid .colvid2 {
+    margin-left: 3%;
+    margin-right: 0;
+    padding: 0;
+    gap: 2%;
+    justify-content: start;
+  }
+  body main .contenedor-grid .colvid2 .card, body main .contenedor-grid .colvid2 .newvid .card, body main .contenedor-grid .newvid .colvid2 .card, body main .contenedor-grid .colvid2 .colvid1 .card, .colvid1 body main .contenedor-grid .colvid2 .card, body main .colvid1 .contenedor-grid .colvid2 .newvid .card, .colvid1 body main .contenedor-grid .colvid2 .newvid .card, body main .colvid1 .contenedor-grid .newvid .colvid2 .card, .colvid1 body main .contenedor-grid .newvid .colvid2 .card, body main .contenedor-grid .colvid2 .newvid .colvid1 .card, body main .contenedor-grid .newvid .colvid1 .colvid2 .card, body main .colvid1 .contenedor-grid .colvid2 .newvid .colvid1 .card, .colvid1 body main .contenedor-grid .colvid2 .newvid .colvid1 .card, body main .colvid1 .contenedor-grid .newvid .colvid1 .colvid2 .card, .colvid1 body main .contenedor-grid .newvid .colvid1 .colvid2 .card, body main .contenedor-grid .colvid2 .card, body main .contenedor-grid .colvid2 .contenedor-grid .newvid .card, body main .contenedor-grid .newvid .colvid2 .card, body main .contenedor-grid .colvid1 .colvid2 .card, .colvid1 body main .contenedor-grid .colvid2 .card, body main .contenedor-grid .colvid2 .colvid1 .card, body main .contenedor-grid .colvid1 .colvid2 .contenedor-grid .newvid .card, .colvid1 body main .contenedor-grid .colvid2 .contenedor-grid .newvid .card, body main .contenedor-grid .colvid2 .contenedor-grid .newvid .colvid1 .card, body main .colvid1 .contenedor-grid .newvid .colvid2 .card, .colvid1 body main .contenedor-grid .newvid .colvid2 .card, body main .contenedor-grid .newvid .colvid2 .colvid1 .card, body main .contenedor-grid .colvid2 .colvid1 .contenedor-grid .newvid .card, body main .contenedor-grid .newvid .colvid1 .colvid2 .card, body main .colvid1 .contenedor-grid .newvid .colvid1 .colvid2 .card, .colvid1 body main .contenedor-grid .newvid .colvid1 .colvid2 .card, body main .contenedor-grid .colvid2 .colvid1 .contenedor-grid .newvid .colvid1 .card, body main .contenedor-grid .colvid1 .colvid2 .contenedor-grid .newvid .colvid1 .card, .colvid1 body main .contenedor-grid .colvid2 .contenedor-grid .newvid .colvid1 .card, body main .colvid1 .contenedor-grid .newvid .colvid2 .colvid1 .card, .colvid1 body main .contenedor-grid .newvid .colvid2 .colvid1 .card, body main .colvid2 .contenedor-grid .newvid .colvid2 .card, .colvid2 body main .contenedor-grid .newvid .colvid2 .card, body main .contenedor-grid .colvid2 .morenews .contmorenew .card, .morenews .contmorenew body main .contenedor-grid .colvid2 .card, body main .contenedor-grid .colvid2 .newvid .morenews .contmorenew .card, body main .contenedor-grid .newvid .morenews .contmorenew .colvid2 .card, body main .morenews .contmorenew .contenedor-grid .colvid2 .newvid .card, .morenews .contmorenew body main .contenedor-grid .colvid2 .newvid .card, body main .morenews .contmorenew .contenedor-grid .newvid .colvid2 .card, .morenews .contmorenew body main .contenedor-grid .newvid .colvid2 .card, body main .contenedor-grid .colvid2 .colvid1 .morenews .contmorenew .card, .colvid1 .morenews .contmorenew body main .contenedor-grid .colvid2 .card, body main .contenedor-grid .colvid2 .morenews .contmorenew .colvid1 .card, .morenews .contmorenew .colvid1 body main .contenedor-grid .colvid2 .card, body main .colvid1 .contenedor-grid .colvid2 .newvid .morenews .contmorenew .card, .colvid1 body main .contenedor-grid .colvid2 .newvid .morenews .contmorenew .card, body main .colvid1 .contenedor-grid .newvid .morenews .contmorenew .colvid2 .card, .colvid1 body main .contenedor-grid .newvid .morenews .contmorenew .colvid2 .card, body main .morenews .contmorenew .colvid1 .contenedor-grid .colvid2 .newvid .card, .morenews .contmorenew .colvid1 body main .contenedor-grid .colvid2 .newvid .card, body main .morenews .contmorenew .colvid1 .contenedor-grid .newvid .colvid2 .card, .morenews .contmorenew .colvid1 body main .contenedor-grid .newvid .colvid2 .card, body main .contenedor-grid .colvid2 .newvid .colvid1 .morenews .contmorenew .card, body main .contenedor-grid .newvid .colvid1 .morenews .contmorenew .colvid2 .card, body main .morenews .contmorenew .contenedor-grid .colvid2 .newvid .colvid1 .card, .morenews .contmorenew body main .contenedor-grid .colvid2 .newvid .colvid1 .card, body main .morenews .contmorenew .contenedor-grid .newvid .colvid1 .colvid2 .card, .morenews .contmorenew body main .contenedor-grid .newvid .colvid1 .colvid2 .card, body main .colvid1 .contenedor-grid .colvid2 .newvid .colvid1 .morenews .contmorenew .card, .colvid1 body main .contenedor-grid .colvid2 .newvid .colvid1 .morenews .contmorenew .card, body main .colvid1 .contenedor-grid .newvid .colvid1 .morenews .contmorenew .colvid2 .card, .colvid1 body main .contenedor-grid .newvid .colvid1 .morenews .contmorenew .colvid2 .card, body main .morenews .contmorenew .colvid1 .contenedor-grid .colvid2 .newvid .colvid1 .card, .morenews .contmorenew .colvid1 body main .contenedor-grid .colvid2 .newvid .colvid1 .card, body main .morenews .contmorenew .colvid1 .contenedor-grid .newvid .colvid1 .colvid2 .card, .morenews .contmorenew .colvid1 body main .contenedor-grid .newvid .colvid1 .colvid2 .card, body main .contenedor-grid .colvid2 .morenews .contmorenew .card, body main .contenedor-grid .morenews .contmorenew .colvid2 .card, .morenews .contmorenew body main .contenedor-grid .colvid2 .card, body main .contenedor-grid .colvid2 .contenedor-grid .newvid .morenews .contmorenew .card, body main .contenedor-grid .morenews .contmorenew .colvid2 .contenedor-grid .newvid .card, .morenews .contmorenew body main .contenedor-grid .colvid2 .contenedor-grid .newvid .card, body main .contenedor-grid .newvid .colvid2 .morenews .contmorenew .card, body main .morenews .contmorenew .contenedor-grid .newvid .colvid2 .card, .morenews .contmorenew body main .contenedor-grid .newvid .colvid2 .card, body main .contenedor-grid .colvid1 .colvid2 .morenews .contmorenew .card, .colvid1 body main .contenedor-grid .colvid2 .morenews .contmorenew .card, body main .contenedor-grid .morenews .contmorenew .colvid1 .colvid2 .card, .morenews .contmorenew .colvid1 body main .contenedor-grid .colvid2 .card, body main .contenedor-grid .colvid2 .colvid1 .morenews .contmorenew .card, body main .contenedor-grid .morenews .contmorenew .colvid2 .colvid1 .card, .morenews .contmorenew body main .contenedor-grid .colvid2 .colvid1 .card, body main .contenedor-grid .colvid1 .colvid2 .contenedor-grid .newvid .morenews .contmorenew .card, .colvid1 body main .contenedor-grid .colvid2 .contenedor-grid .newvid .morenews .contmorenew .card, body main .contenedor-grid .morenews .contmorenew .colvid1 .colvid2 .contenedor-grid .newvid .card, .morenews .contmorenew .colvid1 body main .contenedor-grid .colvid2 .contenedor-grid .newvid .card, body main .contenedor-grid .colvid2 .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card, body main .contenedor-grid .morenews .contmorenew .colvid2 .contenedor-grid .newvid .colvid1 .card, .morenews .contmorenew body main .contenedor-grid .colvid2 .contenedor-grid .newvid .colvid1 .card, body main .colvid1 .contenedor-grid .newvid .colvid2 .morenews .contmorenew .card, .colvid1 body main .contenedor-grid .newvid .colvid2 .morenews .contmorenew .card, body main .morenews .contmorenew .colvid1 .contenedor-grid .newvid .colvid2 .card, .morenews .contmorenew .colvid1 body main .contenedor-grid .newvid .colvid2 .card, body main .contenedor-grid .newvid .colvid2 .colvid1 .morenews .contmorenew .card, body main .morenews .contmorenew .contenedor-grid .newvid .colvid2 .colvid1 .card, .morenews .contmorenew body main .contenedor-grid .newvid .colvid2 .colvid1 .card, body main .contenedor-grid .colvid2 .colvid1 .contenedor-grid .newvid .morenews .contmorenew .card, body main .contenedor-grid .morenews .contmorenew .colvid2 .colvid1 .contenedor-grid .newvid .card, .morenews .contmorenew body main .contenedor-grid .colvid2 .colvid1 .contenedor-grid .newvid .card, body main .contenedor-grid .newvid .colvid1 .colvid2 .morenews .contmorenew .card, body main .morenews .contmorenew .contenedor-grid .newvid .colvid1 .colvid2 .card, .morenews .contmorenew body main .contenedor-grid .newvid .colvid1 .colvid2 .card, body main .colvid1 .contenedor-grid .newvid .colvid1 .colvid2 .morenews .contmorenew .card, .colvid1 body main .contenedor-grid .newvid .colvid1 .colvid2 .morenews .contmorenew .card, body main .morenews .contmorenew .colvid1 .contenedor-grid .newvid .colvid1 .colvid2 .card, .morenews .contmorenew .colvid1 body main .contenedor-grid .newvid .colvid1 .colvid2 .card, body main .contenedor-grid .colvid2 .colvid1 .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card, body main .contenedor-grid .morenews .contmorenew .colvid2 .colvid1 .contenedor-grid .newvid .colvid1 .card, .morenews .contmorenew body main .contenedor-grid .colvid2 .colvid1 .contenedor-grid .newvid .colvid1 .card, body main .contenedor-grid .colvid1 .colvid2 .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card, .colvid1 body main .contenedor-grid .colvid2 .contenedor-grid .newvid .colvid1 .morenews .contmorenew .card, body main .contenedor-grid .morenews .contmorenew .colvid1 .colvid2 .contenedor-grid .newvid .colvid1 .card, .morenews .contmorenew .colvid1 body main .contenedor-grid .colvid2 .contenedor-grid .newvid .colvid1 .card, body main .colvid1 .contenedor-grid .newvid .colvid2 .colvid1 .morenews .contmorenew .card, .colvid1 body main .contenedor-grid .newvid .colvid2 .colvid1 .morenews .contmorenew .card, body main .morenews .contmorenew .colvid1 .contenedor-grid .newvid .colvid2 .colvid1 .card, .morenews .contmorenew .colvid1 body main .contenedor-grid .newvid .colvid2 .colvid1 .card, body main .colvid2 .contenedor-grid .newvid .colvid2 .morenews .contmorenew .card, .colvid2 body main .contenedor-grid .newvid .colvid2 .morenews .contmorenew .card, body main .morenews .contmorenew .colvid2 .contenedor-grid .newvid .colvid2 .card, .morenews .contmorenew .colvid2 body main .contenedor-grid .newvid .colvid2 .card {
+    height: 280px;
+  }
+  body main .morenews {
+    margin-top: -25%;
+    display: flex;
+    flex-direction: column;
+  }
+  body main .morenews .carousel {
     display: block;
     margin: 4% 10% 2% 10%;
     border: 4px solid black;
     border-radius: 5% 5% 5% 5%;
-}
-
-.carousel img{
+  }
+  body main .morenews .carousel img {
     border-radius: 5% 5% 5% 5%;
+  }
+  body main .morenews .contmorenew {
+    display: none;
+  }
 }
 
+.contitulo {
+  border-top: 5px solid black;
+  border-right: 5px solid black;
+  border-radius: 0 5px 0 0;
+  margin: 2% 5% 0 5%;
+  padding-top: 1%;
+}
+.contitulo div {
+  width: 100%;
+  background-color: rgb(182, 182, 182);
+  padding: 0.5%;
+  text-align: center;
+  border-radius: 7px;
 }
 
-@media screen and (max-width:1075px){
-
-.auto-f1{
-    left: 5%;
+.equipos-grid {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  gap: 2%;
+  margin-top: 50px;
+  margin-bottom: 15%;
+}
+.equipos-grid hr {
+  width: 95%;
+  margin: 2%;
+}
+.equipos-grid .filas-equipos {
+  padding: 0 10% 0 10%;
+  display: flex;
+  justify-content: center;
+  gap: 4%;
+}
+.equipos-grid .filas-equipos .equipo-auto {
+  border-radius: 0 5px 0 0;
+  border-top: 3px solid black;
+  border-right: 3px solid black;
+  color: rgba(0, 0, 0, 0.493);
+  font-size: 100%;
+  width: 150%;
+}
+.equipos-grid .filas-equipos .equipo-auto .cabecera-piloto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 2%;
+}
+.equipos-grid .filas-equipos .equipo-auto .cabecera-piloto h1 {
+  font-weight: bold;
+  font-size: 380%;
+}
+.equipos-grid .filas-equipos .equipo-auto .cabecera-piloto div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.equipos-grid .filas-equipos .equipo-auto .cabecera-piloto div h2 {
+  color: black;
+  font-size: 200%;
+}
+.equipos-grid .filas-equipos .equipo-auto .cabecera-piloto div .bg-black {
+  background-color: black;
+  border-radius: 10px;
+  color: white;
+  margin: 0;
+}
+.equipos-grid .filas-equipos .equipo-auto .nombre-piloto {
+  display: flex;
+  align-items: center;
+  border-left: 5px solid blue;
+  justify-content: space-between;
+}
+.equipos-grid .filas-equipos .equipo-auto .nombre-piloto .nombre-p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 2%;
+  min-width: 190px;
+}
+.equipos-grid .filas-equipos .equipo-auto .nombre-piloto img {
+  width: 18%;
+  padding-right: 2%;
+}
+.equipos-grid .filas-equipos .equipo-auto .nombres-equipo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.equipos-grid .filas-equipos .equipo-auto .nombres-equipo .teamates {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 2%;
+}
+.equipos-grid .filas-equipos .equipo-auto .nombres-equipo .teamates .teamate1 {
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  border-radius: 0 0 20px 0;
+  width: 100%;
+}
+.equipos-grid .filas-equipos .equipo-auto .nombres-equipo .teamates .teamate1 h4 {
+  color: rgba(0, 0, 0, 0.493);
+  font-size: 100%;
+}
+.equipos-grid .filas-equipos .equipo-auto .nombres-equipo .teamates .teamate1 h3 {
+  font-weight: bold;
+  color: black;
+  font-size: 130%;
+  margin: 0;
+}
+.equipos-grid .filas-equipos .equipo-auto .nombres-equipo .teamates .teamate2 {
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  border-radius: 0 0 20px 0;
+  width: 100%;
+  margin-right: 2%;
+}
+.equipos-grid .filas-equipos .equipo-auto .nombres-equipo .teamates .teamate2 h4 {
+  color: rgba(0, 0, 0, 0.493);
+  font-size: 100%;
+}
+.equipos-grid .filas-equipos .equipo-auto .nombres-equipo .teamates .teamate2 h3 {
+  color: black;
+  font-weight: bold;
+  font-size: 130%;
+  margin: 0;
 }
 
-}
-
-@media screen and (max-width:750px){
-
-.filas-equipos{
-    display: flex;
-    flex-direction: column;
-    margin: 0% 9% 0 2%;
-    padding: 0 25% 2% 2%;
-    gap: 2%;
-}
-
-.equipos-grid{
+@media screen and (max-width: 480px) {
+  body main .equipos-grid {
     gap: 0;
     padding: 0;
+  }
+  body main .equipos-grid .filas-equipos {
+    flex-direction: column;
+    align-items: center;
+    gap: 2%;
+  }
+  body main .equipos-grid .filas-equipos .equipo-auto {
+    width: 100%;
+  }
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Bruno Ace", cursive;
 }
+
+/*# sourceMappingURL=style.css.map */
