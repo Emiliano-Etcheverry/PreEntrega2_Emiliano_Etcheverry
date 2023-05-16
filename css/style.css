@@ -3,7 +3,7 @@
 .container-fluid {
   align-items: end;
 }
-.container-fluid h1 {
+.container-fluid h2 {
   margin: 0;
   padding: 0;
 }
@@ -71,6 +71,9 @@ footer div ul a i {
   font-size: 25px;
   color: white;
 }
+footer div ul a i:hover {
+  color: red;
+}
 
 @media screen and (max-width: 480px) {
   body footer {
@@ -102,6 +105,13 @@ footer div ul a i {
   background-color: black;
   padding-top: 10px;
 }
+.video-head iframe {
+  filter: grayscale(1);
+}
+.video-head iframe:hover {
+  filter: grayscale(0);
+  cursor: pointer;
+}
 .video-head h1 {
   color: white;
   padding: 2%;
@@ -129,6 +139,13 @@ footer div ul a i {
   gap: 2%;
   height: 500px;
   width: 100%;
+}
+.video-head .st-v .start-v iframe {
+  filter: grayscale(1);
+}
+.video-head .st-v .start-v iframe:hover {
+  filter: grayscale(0);
+  cursor: pointer;
 }
 .video-head .st-v .start-v .vid-start-2 {
   display: flex;
@@ -189,10 +206,10 @@ footer div ul a i {
 }
 
 .related {
-  padding-bottom: 2%;
+  padding-bottom: 5%;
   background-color: rgb(241, 241, 241);
 }
-.related h1 {
+.related h2 {
   padding-left: 2%;
 }
 .related .grid-related {
@@ -282,28 +299,33 @@ footer div ul a i {
     height: 300px;
   }
   body main .related {
-    padding-bottom: 32%;
+    padding-top: 5%;
+    padding-bottom: 0;
     gap: 2%;
   }
-  body main .related h1 {
+  body main .related h2 {
     padding-top: 15px;
     font-size: 25px;
     padding-left: 5%;
     padding-bottom: 20px;
   }
+  body main .related .grid-related {
+    gap: 0;
+  }
   body main .related .grid-related .grid-rel-fila {
     flex-direction: column;
-    gap: 3%;
   }
   body main .related .grid-related .grid-rel-fila .video-f1 {
     width: 100%;
+    margin-top: 4%;
+    border-radius: 0 20px 20px 20px;
   }
   body main .related .grid-related .grid-rel-fila .video-f1 a {
     display: flex;
   }
   body main .related .grid-related .grid-rel-fila .video-f1 a .video-play .img-video-f1 {
     width: 210px;
-    height: 200px;
+    height: 245px;
   }
 }
 
@@ -325,7 +347,7 @@ footer div ul a i {
 .pilotos-grid {
   display: grid;
   grid-template-rows: repeat(5, 0.5fr);
-  gap: 2%;
+  gap: 0;
   margin-top: 50px;
 }
 .pilotos-grid hr {
@@ -335,8 +357,7 @@ footer div ul a i {
 .pilotos-grid .filas {
   padding: 0 10% 0 10%;
   display: flex;
-  justify-content: center;
-  gap: 4%;
+  gap: 10%;
 }
 .pilotos-grid .filas-4 {
   padding: 0 4% 0 4%;
@@ -350,6 +371,7 @@ footer div ul a i {
   border-top: 3px solid black;
   border-right: 3px solid black;
   width: 1fr;
+  margin-top: 5%;
 }
 .pilotos .cabecera-piloto {
   display: flex;
@@ -357,7 +379,7 @@ footer div ul a i {
   align-items: center;
   padding-right: 2%;
 }
-.pilotos .cabecera-piloto h1 {
+.pilotos .cabecera-piloto h2 {
   font-weight: bold;
   font-size: 380%;
 }
@@ -366,11 +388,11 @@ footer div ul a i {
   flex-direction: column;
   align-items: center;
 }
-.pilotos .cabecera-piloto h2 {
+.pilotos .cabecera-piloto div h2 {
   color: black;
   font-size: 200%;
 }
-.pilotos .cabecera-piloto h3 {
+.pilotos .cabecera-piloto div h3 {
   color: white;
   border-radius: 5px;
   font-size: 155%;
@@ -381,18 +403,18 @@ footer div ul a i {
   border-left: 5px solid blue;
   justify-content: space-between;
 }
-.pilotos .nombre-piloto div {
+.pilotos .nombre-piloto .nombre-p {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-left: 2%;
   min-width: 190px;
 }
-.pilotos .nombre-piloto div h4 {
+.pilotos .nombre-piloto .nombre-p h2 {
   color: rgba(0, 0, 0, 0.493);
   font-size: 100%;
 }
-.pilotos .nombre-piloto div h3 {
+.pilotos .nombre-piloto .nombre-p h3 {
   font-size: 130%;
   margin: 0;
 }
@@ -426,8 +448,7 @@ footer div ul a i {
 
 @media screen and (max-width: 480px) {
   body main .pilotos-grid {
-    padding-top: 2%;
-    height: 5750px;
+    height: 5490px;
   }
   body main .pilotos-grid .filas {
     flex-direction: column;
@@ -455,7 +476,7 @@ footer div ul a i {
 .podium .puesto2 {
   width: 90%;
 }
-.podium .puesto2 .podio-piloto h1 {
+.podium .puesto2 .podio-piloto h2 {
   position: absolute;
   left: 8%;
   bottom: 52%;
@@ -472,7 +493,7 @@ footer div ul a i {
 .podium .puesto3 {
   width: 80%;
 }
-.podium .puesto3 .podio-piloto h1 {
+.podium .puesto3 .podio-piloto h2 {
   position: absolute;
   left: 8%;
   bottom: 52%;
@@ -494,7 +515,7 @@ footer div ul a i {
   position: relative;
   height: 100%;
 }
-.podio .podio-piloto h1, .podium .puesto2 .podio-piloto h1, .podium .puesto1 .podio-piloto h1, .podium .puesto3 .podio-piloto h1 {
+.podio .podio-piloto h2, .podium .puesto2 .podio-piloto h2, .podium .puesto1 .podio-piloto h2, .podium .puesto3 .podio-piloto h2 {
   position: absolute;
   left: 5%;
   bottom: 70%;
@@ -512,7 +533,7 @@ footer div ul a i {
   width: 100%;
   border-radius: 0 0 25px 25px;
 }
-.podio .name-podio h3, .podium .puesto2 .name-podio h3, .podium .puesto1 .name-podio h3, .podium .puesto3 .name-podio h3, .podio .name-podio h1, .podium .puesto2 .name-podio h1, .podium .puesto1 .name-podio h1, .podium .puesto3 .name-podio h1 {
+.podio .name-podio h3, .podium .puesto2 .name-podio h3, .podium .puesto1 .name-podio h3, .podium .puesto3 .name-podio h3, .podio .name-podio h2, .podium .puesto2 .name-podio h2, .podium .puesto1 .name-podio h2, .podium .puesto3 .name-podio h2 {
   font-size: 170%;
 }
 
@@ -539,6 +560,7 @@ footer div ul a i {
 .position-pilotos .stand .st-name h2 {
   border-right: 3px solid red;
   padding-right: 2%;
+  width: 50px;
 }
 .position-pilotos .stand .points {
   display: flex;
@@ -550,20 +572,18 @@ footer div ul a i {
   border-radius: 20px;
   color: white;
   margin: 0;
+  width: 200px;
 }
 .position-pilotos .stand .points i {
   font-size: 40px;
 }
 
 .f1topics {
-  position: relative;
+  padding: 0 2% 0 2%;
 }
 .f1topics h2 {
   background-color: white;
-  position: absolute;
-  top: -15px;
-  left: 0;
-  padding-right: 10px;
+  padding-left: 2%;
 }
 .f1topics .f1-new-topics {
   border-top: 8px solid black;
@@ -642,7 +662,7 @@ footer div ul a i {
     width: 340px;
     margin: 10px 0px 30px 0px;
   }
-  body main .podium .puesto1 .podio .podio-piloto h1, body main .podium .puesto1 .puesto2 .podio-piloto h1, body main .podium .puesto1 .puesto1 .podio-piloto h1, body main .podium .puesto1 .puesto3 .podio-piloto h1 {
+  body main .podium .puesto1 .podio .podio-piloto h2, body main .podium .puesto1 .puesto2 .podio-piloto h2, body main .podium .puesto1 .puesto1 .podio-piloto h2, body main .podium .puesto1 .puesto3 .podio-piloto h2 {
     left: 6%;
     bottom: 67%;
     font-size: 401%;
@@ -682,7 +702,7 @@ footer div ul a i {
   body main .position-pilotos .stand .st-name h3 {
     display: none;
   }
-  body main .position-pilotos .stand .st-name h1 {
+  body main .position-pilotos .stand .st-name h4 {
     margin: 0;
     padding-left: 5%;
     font-size: larger;

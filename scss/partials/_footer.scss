@@ -45,6 +45,10 @@ footer{
                     border-radius: 50%;
                     font-size: 25px;
                     color: white;
+
+                    &:hover{
+                        color: red;
+                    }
                 }
             }
         }
