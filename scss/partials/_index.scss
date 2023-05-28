@@ -1,0 +1,260 @@
+@import "variables";
+
+.publicidad{
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(180deg, rgba(0,0,0,1) 8%, rgba(0,89,79,1) 100%, rgba(97,143,255,1) 100%, rgba(95,105,125,1) 100%, rgba(0,212,255,1) 100%);
+
+    .publi-container{
+        background-image: url(../../img/fondo-lineas.png);
+        background-size: cover;
+        padding: 20px;
+        img{
+            width: 100%;
+        }
+    }    
+}
+
+.contenedor-grid{
+    display: grid;
+    padding: 4% 5% 2% 5%;
+    grid-template-columns: 50% 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "newvid colvid1 colvid2"
+    "newvid colvid1 colvid2"
+    "newvid colvid1 colvid2"
+    "newvid colvid1 colvid2";
+    background-color: $Green;
+
+    .newvid{
+        grid-area: newvid;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        gap: 5%;
+        border-right: 8px solid $dGreen;
+        border-top: 8px solid $dGreen;
+        border-radius: 0 20px 0 0;
+        position: relative;
+        background-image: url(../../img/fondo-lineas-card.png);
+        background-size: cover;
+
+        .sticky-top{
+            overflow: hidden;
+            border-radius: 0 20px 0 0;
+            background-color: $Green;
+            .card{
+                @extend .card;
+                border: 2px solid transparent;
+                position: absolute;
+                background-color: $Green;
+                
+                &:hover{
+                    .card-body{
+                        
+                        .card-text{
+                            color: black;
+                        }
+                    }
+                }
+    
+                a{
+                    .card-body{
+                        background-color: $Green;
+                        h5{
+                            color: rgba(255, 255, 255, 0.637);
+                        }
+                        .card-text{
+                            color: rgba(255, 255, 255, 0.637);
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+.colvid1{
+    grid-area: colvid1;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 5px;
+    justify-content: space-between;
+    
+    gap: 10px;
+
+    .card{
+        @extend .card;
+        box-shadow: 5px 5px 10px 5px;
+        border: 2px solid black; 
+        background-color: #27c4b183;
+    }
+}
+
+.colvid2{
+    grid-area: colvid2;
+    display: flex;
+    flex-direction: column;
+    padding-left: 5px;
+    padding-right: 10px;
+    justify-content: space-between;
+   
+    gap: 10px;
+
+    .card{
+        @extend .card;
+        box-shadow: 5px 5px 10px 5px; 
+        border: 2px solid black;
+        background-color: #27c4b183;
+    }
+}
+
+.card{
+    display: grid;
+    position: relative;
+    align-items: stretch;
+    font-size: 70%;
+    min-height: 253px;
+    transition: .3s;
+
+    .card-body{
+        transition: .5s;
+    }
+
+    a{
+        text-decoration: none;
+        color: black;
+    }
+
+    &:hover{
+        transform: scale(1.04);
+        .card-body{
+            background-color: $aquamarine;
+
+            h5{
+                color: $lGreen;
+            }
+        }
+    }
+}
+
+.morenews{
+
+    background-color: $Green;
+    padding-bottom: 2%;
+
+    h2{
+        border-bottom: 8px solid $dGreen;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        margin: 0 5% 0 5%;
+        color: $white;
+    }
+
+    .carousel{
+        display: none;
+    }
+
+    .contmorenew{
+        margin: 2% 5% 0 5%;
+        display: flex;
+
+        .card{
+            @extend .card;
+            min-width: 179px;
+            border: 1px solid black;  
+            box-shadow: 5px 5px 10px 5px; 
+            background-color: #27c4b183;
+            
+            &:hover{
+                transform: scale(1.05);
+                .card-body{
+                    background-color: $aquamarine;
+        
+                    h5{
+                        color: $lGreen;
+                    }
+                }
+            }
+        }
+    }
+} 
+
+body{
+    @include media-query(mobile){
+        main{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        
+            .contenedor-grid{
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 50% 20% 20% 20%;
+                grid-template-areas: 
+                "newvid newvid"
+                "colvid1 colvid2"
+                "colvid1 colvid2"
+                "colvid1 colvid2"
+                "morenews morenews";
+                gap: 0%;
+
+                .newvid{
+                    border-right: 0;
+                    border-radius: 25px 25px 0 0;
+                    margin-bottom: 0;
+                    gap: 0;
+                    justify-content: space-around;
+                }
+
+                .colvid1{
+                    margin-left: 0;
+                    margin-right: 3%;
+                    padding: 0;
+                    gap: 2%;
+                    justify-content: start;
+
+                    .card{
+                        height: 280px;
+                    }
+                }
+                
+                .colvid2{
+                    margin-left: 3%;
+                    margin-right: 0;
+                    padding: 0;
+                    gap: 2%;
+                    justify-content: start;
+
+                    .card{
+                        height: 280px;
+                    }
+                }
+            }
+
+            .morenews{
+                margin-top: 40%;
+                margin-bottom: 4%;
+                display: flex;
+                flex-direction: column;
+            
+                .carousel{
+                    display: block;
+                    margin: 4% 10% 2% 10%;
+                    border: 4px solid black;
+                    border-radius: 5% 5% 5% 5%;
+                
+                    img{
+                        border-radius: 5% 5% 5% 5%;
+                    }
+                }
+            
+                .contmorenew{
+                    display: none;
+                }
+            }
+        }
+    }
+}

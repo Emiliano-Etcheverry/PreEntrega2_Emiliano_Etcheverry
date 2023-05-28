@@ -1,0 +1,473 @@
+@import "variables";
+
+.posiciones{
+    display: flex;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, rgba(0,0,0,1) 8%, rgba(0,89,79,1) 100%, rgba(97,143,255,1) 100%, rgba(95,105,125,1) 100%, rgba(0,212,255,1) 100%);
+
+    h2{
+        color: white;
+        font-weight: bolder;
+        
+    }
+}
+
+.podium{
+    display: flex;
+    justify-content: center; 
+    gap: 2%;  
+    align-items: end;
+    padding: 0 2% 0 2%;
+    background-color: $Green;
+
+    .puesto2{
+        width: 90%;
+        @extend .podio;
+
+        .podio-piloto{
+
+            h2{    
+                position: absolute;
+                left: 8%;
+                bottom: 52%;
+            }
+        }
+
+        .name-podio{
+            
+            .pais2{
+                width: 22%;
+            }
+        }
+        
+    }
+
+    .puesto1{
+        width: 100%;
+        @extend .podio;
+
+        .name-podio{
+
+            .pais1{
+                width: 22%;
+            }
+        }
+    }
+    
+    .puesto3{
+        width: 80%;
+        @extend .podio;
+
+        .podio-piloto{
+        
+            h2{ 
+                position: absolute;
+                left: 8%;
+                bottom: 52%;
+                bottom: 70%;
+                font-size: 500%;
+            }
+        }
+        
+        .name-podio{
+
+            .pais3{
+                width: 22%;
+            }    
+        }        
+    }
+}
+
+
+.podio{
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    box-shadow: 5px 5px 20px;
+
+    .podio-piloto{
+        border-bottom: 8px solid red;
+        position: relative;
+        height: 100%;
+   
+        h2{
+            position: absolute;
+            left: 5%;
+            bottom: 70%;
+            font-size: 500%;
+        }
+
+        .podio-img{
+            width: 100%;
+        }
+        
+    }
+
+    .name-podio{
+        display: flex;
+        justify-content: space-between;
+        background-color: black;
+        color: white;
+        padding: 5%;
+        width: 100%;
+        border-radius: 0 0 25px 25px;
+    
+        h3,h2{
+            font-size: 170%;
+        }
+    }
+}
+
+
+.position-pilotos{
+    padding: 2% 5% 2% 5%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 5px;
+
+    .stand{
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        background-color: rgb(250, 245, 239);
+        padding-left: 20px;
+        border-radius: 20px;
+    
+        .st-name{
+            display: flex;
+            align-items: center;
+            gap: 2%; 
+            width: 80%;
+        
+            h2{
+                border-right: 3px solid red;
+                padding-right: 2%;
+                width: 50px;
+            }
+        }
+
+        img{
+            display: none;
+        }
+
+        .points{
+            display: flex;
+            align-items: center;
+            padding: 8px 20px 8px 20px;
+            gap: 2%;
+        
+            h2{
+                background-color: black;
+                border-radius: 20px;
+                color: white;
+                margin: 0;
+                width: 200px;
+            }
+        
+            .toggle{
+                
+                position: absolute;
+                right: -3%;
+                top: 14%;
+                border-radius: 70px;
+                background-color: red;
+                border: solid 5px white;
+                text-align: center;
+                i{
+                    font-size: 3vw; 
+                    text-align: center;    
+                }
+            }
+            
+            
+            .bi-chevron-up{
+                display: none;
+            }
+        }
+
+        &.active{
+
+            position: relative;
+            height: 500px;
+    
+        .st-name{
+            position: absolute;
+            bottom: 5px;
+            left: 5px;
+
+        
+            h2{
+                border-right: 3px solid red;
+                padding-right: 2%;
+                width: 50px;
+            }
+        }
+
+        img{
+            position: absolute;
+            left: -50px;
+            top: -25px;
+            display: inline-block;
+            height: 250px;
+            overflow-y: 50px;
+        }
+        .points{
+            position: absolute;
+            right: 0;
+            bottom: 5px;
+        
+            h2{
+                background-color: black;
+                border-radius: 20px;
+                color: white;
+                margin: 0;
+                width: 200px;
+            }
+        
+            .toggle{
+                
+                .bi-chevron-up{
+                    display: inline-block;
+                }
+
+                .bi-chevron-down{
+                    display: none;
+                }
+            }            
+        }
+        }
+    }
+}
+
+.f1topics{
+    padding: 0 2% 0 2%;
+    h2{
+        background-color: white;
+        padding-left: 2%;
+    }
+
+    .f1-new-topics{
+        border-top: 8px solid black;
+        border-right: 8px solid black;
+        border-radius: 0 20px 0 0;
+        padding-top: 2%;
+        padding-right: 2%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 30px;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        width: 100%;
+
+        h3{
+            color: white;
+        }
+
+        .refs-e{
+            display: flex;
+            background-image: url(../img/e-sport.jpg);
+            background-repeat: none;
+            background-size: 100%;
+            height: 170px;
+            width: 302px; 
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+        }
+        
+        .refs-s{
+            display: flex;
+            position: relative;
+            background-image: url(https://media.formula1.com/image/upload/f_auto/q_auto/v1679313708/fom-website/2018-redesign-assets/Tag%20collections/Other/NetZero_Car_i4_i3_0004.jpg.transform/5col/image.jpg);
+            background-repeat: none;
+            background-size: 100%;
+            height: 170px;
+            width: 302px; 
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+        }
+        
+        .refs-p{
+            display: flex;
+            position: relative;
+            background-image: url(https://media.formula1.com/image/upload/content/dam/fom-website/2018-redesign-assets/Tag%20collections/Other/Beyond%20The%20Grid%20Header%202023.png.transform/5col/image.png);
+            background-repeat: none;
+            background-size: 100%;
+            height: 170px;
+            width: 302px;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none; 
+        }
+        
+        .refs-c{
+            display: flex;
+            position: relative;
+            background-image: url(https://media.formula1.com/image/upload/content/dam/fom-website/2018-redesign-assets/Tag%20collections/Other/Race-calendar.jpg.transform/5col/image.jpg);
+            background-repeat: none;
+            background-size: 100%;
+            height: 170px;
+            width: 302px; 
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            text-align: center;
+        }
+    }
+}
+
+body{
+    @include media-query(tablet){
+        main{
+
+            .posiciones{
+                height: 60px;
+            }
+            
+            .podium{
+
+                .puesto2{
+                    display: none;
+                }
+
+                .puesto1{
+
+                    width: 340px;
+                    margin: 10px 0px 30px 0px;
+                    
+                    .podio{
+
+                        .podio-piloto{
+
+                            h2{
+                                left: 6%;
+                                bottom: 67%;
+                                font-size: 401%;
+                            }
+                        }
+
+                        .name-podio{
+                            
+                            align-items: center;
+
+                            div{
+                                font-size: small;
+                            }
+
+                            img{
+                                width: 25%;
+                                height: 30%;
+                            }
+                        }
+                    }
+                }
+
+                .puesto3{
+                    display: none;
+                }
+            }
+
+            .position-pilotos{
+                gap: 3px;
+                margin: 0% 2% 8% 2%;
+
+                .stand{
+                    padding: 0;
+
+                    .st-name{
+                        gap: 0;
+                        width: 300px;
+                        padding-right: 50px;
+                        padding-left: 6%;
+
+                        h2{
+                            font-size: larger;
+                            padding-right: 15px;
+                            margin: 0;
+                            width: 40px;
+                        }
+
+                        h3{
+                            display: none;
+                        }
+
+                        h4{
+                            margin: 0;
+                            padding-left: 5%;
+                            font-size: larger;
+                        }
+
+                        p{
+                            display: none;
+                        }
+                    }
+
+                    .points{
+                     
+                        h2{
+                            font-size: large;
+                            border-radius: 20px;
+                            width: 95px;
+                        }
+
+                        i{
+                            font-size: 25px;
+                        }
+                    }
+                }
+            }
+
+            .f1topics{
+
+                padding: 25px 10px 3px 10px;
+
+                h2{
+                    left: 159px;
+                }
+
+                .f1-new-topics{
+                    flex-direction: column;
+                    padding-top: 6%;
+                    padding-bottom: 4%;
+
+                    .refs-e{
+                        width: 390px;
+                        transition: transform 2;
+                    &:hover{
+                    transform: scale(1.1);
+                    }
+                    }
+
+                    .refs-s{
+                        width: 390px;
+                        transition: transform 2;
+                    &:hover{
+                    transform: scale(1.1);
+                    }
+                    }
+
+                    .refs-p{
+                        width: 390px;
+                        transition: transform 2;
+                    &:hover{
+                    transform: scale(1.1);
+                    }
+                    }
+
+                    .refs-c{
+                        width: 390px;
+                        transition: transform 2;
+                    &:hover{
+                    transform: scale(1.1);
+                    }
+                    }
+                }
+            }
+        }
+    }
+}

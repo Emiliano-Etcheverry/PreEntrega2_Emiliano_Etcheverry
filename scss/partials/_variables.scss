@@ -1,0 +1,24 @@
+@mixin media-query($display){
+    @if $display == tablet {
+        @media screen and (max-width: 750px) {
+            @content;
+        }
+    } @else if $display == mobile {
+        @media screen and (max-width: 480px) {
+            @content;
+        }
+    } 
+}
+
+$dGreen: #00352F;
+$Green: #00594F;
+$lGreen: #CEDC00;
+$white: #FFFFFF;
+$cBlue: #7EB09B;
+$aquamarine: #B5FFE9;
+$mint: #17b890;
+$beaver: #96897b;
+$fgreen: #379634;
+$brown: #60594d;
+$rtaupe: #8b635c;
+$jonquil: #f1c40f;
